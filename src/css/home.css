@@ -5,16 +5,18 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
 body {
     height: 100vh;
+    overflow: scroll;
 }
 
-body {
+@media only screen and (min-width: 600px){} 
+header {
     width: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    background: black;
 }
 
 .one {
@@ -24,15 +26,16 @@ body {
 
 .two {
     grid-column: 2/3;
-    overflow: scroll;
-    position: relative;
-    scroll-snap-align: start;
 }
+
+
+
+
 
 .one {
     background: #000a12;
     display: grid;
-    width: 33.33333333333%;
+    width: 33.3%;
     height: 100vh;
     position: fixed;
     grid-template-columns: 10% 1fr;
@@ -67,6 +70,11 @@ body {
     color: rgb(255, 255, 255);
 }
 
+.title p,
+.title {
+    transition: font-size 300ms ease, opacity 200ms ease;
+}
+
 .title p {
     font-size: 0rem;
 }
@@ -74,12 +82,7 @@ body {
 .two {
     background: #285bd4;
     color: white;
-    height: 300vh;
-    overflow-y: scroll;
-    scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
-
+    height: 500vh;
 
 }
 
@@ -99,21 +102,20 @@ body {
     margin: 2%;
 }
 
-.mainpage img {
+.img {
     object-fit: contain;
     width: 80%;
 }
 
 
-.resources {
+.intro-sections {
     height: 100vh;
     padding: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
+    text-align: center;
 }
 
 
@@ -123,10 +125,63 @@ body {
 }
 
 
-.mainpage h1,
+
 .mainpage p,
-.resources h1 {
+.mainpage h1 {
     text-align: center;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    header {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        background: black;
+    }
+
+    .one {
+        grid-row: 2/3;
+        color: white;
+    }
+
+    .two {
+        grid-row: 1/2;
+    }
+
+    .one {
+        background: #000a12;
+        display: grid;
+        width: 100%;
+        height: 33.3vh;
+        position: fixed;
+        grid-template-rows: 10% 1fr;
+
+    }
+
+    .navbar {
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 100% 0% 0% 30%;
+        width: 20px;
+        height: 20px;
+        list-style: none;
+    }
+
+    .navbar li img {
+        width: 100%;
+
+        object-fit: contain;
+    }
+
+
 }
 
 .center-text {
