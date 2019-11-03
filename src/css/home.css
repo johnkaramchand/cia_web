@@ -5,63 +5,11 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* UNIVERSAL PROPERTIES FOR BOTH MOBILE AND DESKTOP */
 body {
     height: 100vh;
     overflow: scroll;
     background: black;
-}
-
-@media only screen and (min-width: 600px) {
-    header {
-        width: 100%;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        background: black;
-    }
-
-    .one {
-        grid-column: 1/2;
-        color: white;
-    }
-
-    .two {
-        grid-column: 2/3;
-    }
-
-    .one {
-        background: #000a12;
-        display: grid;
-        width: 33.3333%;
-        height: 100vh;
-        position: fixed;
-        grid-template-columns: 10% 1fr;
-
-    }
-
-    .navbar {
-        grid-column: 1/2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .title {
-        grid-column: 2/3;
-        font-size: 4rem;
-        color: rgb(255, 255, 255);
-
-    }
-
-    .mainpage {
-        position: relative;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10%;
-    }
 }
 
 .navbar li {
@@ -128,8 +76,63 @@ body {
     text-align: center;
 }
 
+/* FOR DESKTOP */
+@media only screen and (min-width: 600px) {
+    header {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        background: black;
+    }
+
+    .one {
+        grid-column: 1/2;
+        color: white;
+    }
+
+    .two {
+        grid-column: 2/3;
+    }
+
+    .one {
+        background: #000a12;
+        display: grid;
+        width: 33.3333%;
+        height: 100vh;
+        position: fixed;
+        grid-template-columns: 10% 1fr;
+
+    }
+
+    .navbar {
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        grid-column: 2/3;
+        font-size: 4rem;
+        color: rgb(255, 255, 255);
+
+    }
+
+    .mainpage {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10%;
+    }
+}
 
 
+
+/* FOR MOBILE */
 @media only screen and (max-width: 600px) {
     header {
         width: 100%;
@@ -182,7 +185,8 @@ body {
         padding: 10%;
         padding-top: 40%;
     }
-    .collab img{
+
+    .collab img {
         padding-top: 40%;
     }
 

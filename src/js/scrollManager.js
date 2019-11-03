@@ -13,15 +13,11 @@ const setReadingContext = (text) => {
         context.innerHTML = text;
         context.style.opacity = '0';
         context.style.fontSize = '0rem';
-        /* t.to(cia, .2, { fontSize: '4rem', opacity: '1' })
-            .to(context, .2, { fontSize: '0rem', opacity: '0' }, '-=.5'); */
     } else if (text !== context.innerHTML) {
         context.style.opacity = '0';
         context.innerHTML = text;
         context.style.opacity = '1';
         context.style.fontSize = '1rem';
-        /* t.to(context, .2, { opacity: '0'})
-            .to(context, .2, { fontSize: '1rem', opacity: '1' }); */
     }
 };
 setReadingContext('default');
