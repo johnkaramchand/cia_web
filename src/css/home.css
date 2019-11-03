@@ -64,7 +64,7 @@ header {
     height: 200vh;
 }
 
-.ciatxt {
+.mainpage {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -72,6 +72,9 @@ header {
     padding: 10%;
 }
 
+.mainpage img{
+    object-fit: contain;
+} 
 .center-text {
     display: flex;
     justify-content: center;
