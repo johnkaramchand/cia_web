@@ -19,7 +19,7 @@ function y(point1, point2) {
                 parts.push(lineObj.yIntercept);
             }
 
-            return 'y = ' + parts.join(' + ');
+            return  parts.join(' + ');
         }
     };
 
