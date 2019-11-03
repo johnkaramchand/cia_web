@@ -31,7 +31,7 @@ body {
     .one {
         background: #000a12;
         display: grid;
-        width: 33.3%;
+        width: 33.3333%;
         height: 100vh;
         position: fixed;
         grid-template-columns: 10% 1fr;
