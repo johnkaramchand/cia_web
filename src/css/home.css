@@ -10,43 +10,57 @@ body {
     overflow: scroll;
 }
 
-@media only screen and (min-width: 600px){} 
-header {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    background: black;
-}
+@media only screen and (min-width: 600px) {
+    header {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        background: black;
+    }
 
-.one {
-    grid-column: 1/2;
-    color: white;
-}
+    .one {
+        grid-column: 1/2;
+        color: white;
+    }
 
-.two {
-    grid-column: 2/3;
-}
+    .two {
+        grid-column: 2/3;
+    }
 
+    .one {
+        background: #000a12;
+        display: grid;
+        width: 33.3%;
+        height: 100vh;
+        position: fixed;
+        grid-template-columns: 10% 1fr;
 
+    }
 
+    .navbar {
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
+    .title {
+        grid-column: 2/3;
+        font-size: 4rem;
+        color: rgb(255, 255, 255);
 
-.one {
-    background: #000a12;
-    display: grid;
-    width: 33.3%;
-    height: 100vh;
-    position: fixed;
-    grid-template-columns: 10% 1fr;
+    }
 
-}
-
-.navbar {
-    grid-column: 1/2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    .mainpage {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10%;
+    }
 }
 
 .navbar li {
@@ -63,13 +77,6 @@ header {
     object-fit: contain;
 }
 
-
-.title {
-    grid-column: 2/3;
-    font-size: 4rem;
-    color: rgb(255, 255, 255);
-}
-
 .title p,
 .title {
     transition: font-size 300ms ease, opacity 200ms ease;
@@ -83,20 +90,9 @@ header {
     background: #285bd4;
     color: white;
     height: 500vh;
-
 }
 
-.mainpage {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10%;
-    scroll-snap-align: start;
 
-}
 
 .mainpage h1 {
     margin: 2%;
@@ -164,23 +160,30 @@ header {
     .navbar {
         grid-row: 1/2;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
     }
 
     .navbar li {
-        margin: 100% 0% 0% 30%;
+        margin: 10% 0% 0% 0%;
         width: 20px;
         height: 20px;
         list-style: none;
     }
 
-    .navbar li img {
-        width: 100%;
-
-        object-fit: contain;
+    .mainpage {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10%;
+        padding-top: 40%;
     }
-
+    .collab img{
+        padding-top: 40%;
+    }
 
 }
 
