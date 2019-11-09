@@ -3,10 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
+    color: var(--texttheme);
 }
 
 body {
+    --bgtheme: white;
+    --texttheme: black;
     height: 200vh;
+    background: var(--bgtheme);
 }
 
 .cover-screen {
@@ -54,11 +58,19 @@ nav {
 
 .nav-items li {
     padding: 5%;
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.nav-items li a {
+    text-decoration: none;
+    color: black;
 }
 
 .cia-tag {
     position: absolute;
-    left: 0;
+    left: 5%;
+    font-weight: 1000;
 }
 
 header {
@@ -70,6 +82,7 @@ header {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    scroll-snap-align: end;
 }
 
 .future {
@@ -84,9 +97,14 @@ header {
     z-index: -10;
 }
 
+.home-img h1,
+.home-img p {}
+
 .two {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+
 }
 
 .two div {
@@ -132,7 +150,7 @@ header {
 }
 
 .philosophy img {
-    
+
     position: absolute;
     bottom: 0;
     left: 50%;
