@@ -1,6 +1,8 @@
 const t = new TimelineMax();
 function intro() {
     const t = new TimelineMax();
-    t.fromTo('.cover-screen', 1, { x: '50%', y: '50%' }, { x: '0%', y: '0%' });
+    t.to('.intro-text h1', 1, { letterSpacing: '0px', ease: Expo.easeOut})
+        .to('.cover-screen', 1, { height: '0', ease: Expo.easeOut})
+        .to('.intro-text h1', 1, { opacity:'0', ease: Expo.easeOut },'-=1');
 }
 intro();
