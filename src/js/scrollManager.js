@@ -3,7 +3,6 @@ let x = (temp.y / temp.height) * -1;
 var header = document.querySelector('header');
 let context = document.querySelector('.title p');
 const setReadingContext = (text) => {
-    //const t = new TimelineLite();
     console.log(text);
     let cia = document.querySelector('.title h1');
     context = document.querySelector('.title p');

@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--texttheme);
+}
+
+body {
+    --bgtheme: white;
+    --texttheme: black;
+    height: 200vh;
+    background: var(--bgtheme);
+}
+
+.cover-screen {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #0F0F0F;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 500%;
+    z-index: 10;
+}
+
+.cover-screen h1 {
+    color: #64E8B0;
+}
+
+.intro-text h1 {
+    letter-spacing: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    position: sticky;
+    width: 100%;
+    height: 10vh;
+}
+
+.nav-items {
+    height: 100%;
+    width: 100%;
+
+    list-style: none;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-items li {
+    padding: 5%;
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.nav-items li a {
+    text-decoration: none;
+    color: black;
+}
+
+.cia-tag {
+    position: absolute;
+    left: 5%;
+    font-weight: 1000;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    scroll-snap-align: end;
+}
+
+.future {
+    width: 50%;
+}
+
+.home-img img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: -5%;
+    z-index: -10;
+}
+
+.home-img h1,
+.home-img p {}
+
+.two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+}
+
+.two div {
+    width: 50vw;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.two div img {
+    margin: 4%;
+    width: 50%;
+}
+
+.two div p,
+.two div h1 {
+    text-align: center;
+}
+
+
+.philosophy {
+    height: 100vh;
+    position: relative;
+}
+
+.philosophy>h1 {
+    padding: 2%;
+    font-size: 3rem;
+    text-align: center
+}
+
+.philosophy-texts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.philosophy-texts>div {
+    margin: 2%;
+    width: 40vw;
+    text-align: center;
+}
+
+.philosophy img {
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 35%;
+    transform: translateX(-50%);
+}
