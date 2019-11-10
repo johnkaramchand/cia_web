@@ -13,6 +13,10 @@ body {
     background: var(--bgtheme);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .cover-screen {
     position: absolute;
     width: 100%;
@@ -30,6 +34,7 @@ body {
 
 .cover-screen h1 {
     color: #64E8B0;
+    pointer-events: none;
 }
 
 .intro-text h1 {
@@ -54,12 +59,19 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    cursor: pointer;
 }
 
 .nav-items li {
     padding: 5%;
     padding-left: 0;
     cursor: pointer;
+    -webkit-transition: color 1s;
+    transition: color 1s;
+}
+
+.nav-items li :hover {
+    color: #28CA9B;
 }
 
 .nav-items li a {
@@ -156,4 +168,37 @@ header {
     left: 50%;
     width: 35%;
     transform: translateX(-50%);
+}
+
+.events-projects {
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
+}
+
+.epnav>h1 {
+    padding: 2%;
+    font-size: 3rem;
+    text-align: center
+}
+
+.epnav>h1 strong:nth-child(1) {
+    color: #28CA9B;
+}
+
+.epnav>h1 strong{
+    cursor: pointer;
+}
+ .epnav {
+    display: flex;
+    justify-content: center;
+}
+
+.epnav img {
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    width: 20%;
+    object-fit: contain;
+    z-index: -10;
 }
