@@ -7,11 +7,12 @@
 }
 
 body {
-    --bgtheme: white;
+    --bgtheme: rgb(240, 253, 255);
     --texttheme: black;
     --green-accent: #28CA9B;
     height: 200vh;
     background: var(--bgtheme);
+    transition: background 2000ms;
 }
 
 html {
@@ -216,7 +217,6 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    overflow: hidden;
 }
 
 /* .events-section::before {
