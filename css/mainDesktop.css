@@ -178,6 +178,9 @@ header {
     width: 100%;
     height: 100vh;
     margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .epnav>h1 {
@@ -198,13 +201,17 @@ header {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
 }
 
 .epnav img {
     position: absolute;
     right: 10%;
-    top: 5%;
-    width: 20%;
+    top: -15%;
+    width: 40%;
     object-fit: contain;
     z-index: -10;
 }
@@ -212,24 +219,24 @@ header {
 
 .events-section {
     width: 100%;
-    height: 60%;
-    margin-top: 10%;
+    height: 80%;
+    
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     overflow: scroll;
 }
 
-/* .events-section::before {
+.events-section::before {
     content: "";
     width: 100%;
-    height: 50%;
+    height: 20%;
     position: absolute;
-    top: 52.2%;
-    background: linear-gradient( transparent,white);
+    bottom: 0;
+    background: linear-gradient( transparent,rgba(255, 255, 255, 0.493));
     z-index: 10;
     pointer-events: none;
-} */
+}
 
 .event {
     width: 250px;
