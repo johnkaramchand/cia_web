@@ -20,6 +20,6 @@ const getEvents = () => {
 };
 //call()
 
-for(let i=0;i<2;i++){
+for(let i=0;i<20;i++){
     eventCreate('Test title', 'test discription', '1st Jan', 'https://blog.printsome.com/wp-content/uploads/big-events-vs-small-events.jpg');
 }
