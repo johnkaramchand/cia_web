@@ -219,7 +219,7 @@ header {
     overflow: hidden;
 }
 
-.events-section::before {
+/* .events-section::before {
     content: "";
     width: 100%;
     height: 50%;
@@ -228,7 +228,7 @@ header {
     background: linear-gradient( transparent,white);
     z-index: 10;
     pointer-events: none;
-}
+} */
 
 .event {
     width: 250px;
