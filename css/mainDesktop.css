@@ -497,15 +497,9 @@
     .epnav>h1 {
         padding: 2%;
         font-size: 3rem;
-        text-align: center
-    }
-
-    .epnav>h1 strong:nth-child(1) {
-        color: #28CA9B;
-    }
-
-    .epnav>h1 strong {
+        text-align: center;
         cursor: pointer;
+        transition: all 100ms;
     }
 
     .epnav {
@@ -609,7 +603,7 @@
 }
 
 .unselected-text {
-    color: gray;
+    color: rgb(106, 106, 106);
     text-transform: lowercase;
     font-size: 2.3rem;
     transition: all 200ms cubic-bezier(.1, 0, 0, 1);
