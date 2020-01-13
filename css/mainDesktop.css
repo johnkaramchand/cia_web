@@ -7,12 +7,12 @@
 }
 
 body {
-    --bgtheme: rgb(240, 253, 255);
+    --bgtheme: white;
     --texttheme: black;
     --green-accent: #28CA9B;
     height: 200vh;
     background: var(--bgtheme);
-    transition: background 2000ms;
+    transition: background 2.5s;
 }
 
 html {
@@ -220,20 +220,75 @@ header {
 .events-section {
     width: 100%;
     height: 80%;
-    
+
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    overflow: scroll;
+    flex-direction: column;
+    overflow: hidden;
 }
 
+.event {
+    width: 100%;
+    margin: 1%;
+    display: flex;
+    padding: 1%;
+    height: 40vh;
+    
+}
+
+.event-img,
+.about-event {
+    width: 50%;
+    height: 95%;
+    margin: 1%;
+}
+
+.event-img {
+    width: 40%;
+}
+
+.event-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.about-event {}
+
+.old-events {
+    width: 100%;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background: white;
+    border-radius: 8px;
+    box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.178);
+}
+
+.old-events .event {
+    flex: 0 0 auto;
+    width: 50%;
+    height: 90%;
+    /* background: yellow; */
+    display: flex;
+    font-size: small;
+}
+
+.old-events .event .about-event {
+    overflow: hidden;
+}
+
+/* 
 .events-section::before {
     content: "";
     width: 100%;
     height: 20%;
     position: absolute;
     bottom: 0;
-    background: linear-gradient( transparent,rgba(255, 255, 255, 0.493));
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.493));
     z-index: 10;
     pointer-events: none;
 }
@@ -245,6 +300,11 @@ header {
     position: relative;
     border-radius: 10px;
     transition: transform 200ms;
+}
+
+.events-section>:first-child {
+    width: 400px;
+    height: 300px;
 }
 
 .event img {
@@ -276,7 +336,7 @@ header {
     right: -20px;
     top: 10px;
 
-    transition: padding 100ms,background 2000ms;
+    transition: padding 100ms, background 2000ms;
 }
 
 .title-discription {
@@ -299,7 +359,7 @@ header {
 }
 
 .event:hover {
-    transform: scale(1.1);
+    transform: scale(1.01);
 }
 
 .event:hover .event-title {
@@ -314,3 +374,7 @@ header {
     padding: 5px;
     font-size: .6rem;
 }
+
+.event:hover .events-section>:first-chid {
+    transform: scale(1.1);
+} */

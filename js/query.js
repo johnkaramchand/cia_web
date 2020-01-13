@@ -20,6 +20,7 @@ const getEvents = () => {
 };
 //call()
 let n = mobileFlag ? 3 : 10;
-for (let i = 0; i < n; i++) {
-    eventCreate('Test title', 'test discription', '1st Jan', 'https://blog.printsome.com/wp-content/uploads/big-events-vs-small-events.jpg');
+/* for (let i = 0; i < n; i++) {
+    eventCreate('Test title', 'test discription', i+'Jan', 'https://blog.printsome.com/wp-content/uploads/big-events-vs-small-events.jpg');
 }
+ */
