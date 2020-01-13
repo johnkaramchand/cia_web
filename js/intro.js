@@ -9,7 +9,7 @@ function intro() {
     const colors = ['rgb(212, 255, 242)', 'white', 'rgb(221, 240, 234)', 'rgb(226, 252, 255)']
     if (!mobileFlag) setInterval(() => {
     document.body.style.setProperty('--bgtheme', colors[Math.floor(Math.random() * colors.length)])
-    }, 3000);
+    }, 1000);
 }
 
 intro();

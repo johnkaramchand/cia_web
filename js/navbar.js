@@ -16,26 +16,38 @@ const navbtns = () => {
     const eventsbtn = document.querySelector('.events-btn');
     homebtn.addEventListener('click', () => document.querySelector('header').scrollIntoView(false));
     aboutbtn.addEventListener('click', () => document.querySelector('.two').scrollIntoView(true));
-    eventsbtn.addEventListener('click', () => document.querySelector('.events-projects').scrollIntoView(true));
+    eventsbtn.addEventListener('click', () => {
+        document.querySelector('.events-projects').scrollIntoView(true)
+        switchTab('events', projectstxt, eventtxt);
+    });
+    projectsbtn.addEventListener('click', () => {
+        document.querySelector('.events-projects').scrollIntoView(true);
+        switchTab('projects', projectstxt, eventtxt);
+    });
 
     const projectstxt = document.querySelector('#projects-text');
     const eventtxt = document.querySelector('#events-text');
+    switchTab('events', projectstxt, eventtxt);
     projectstxt.addEventListener('click', () => switchTab('projects', projectstxt, eventtxt));
     eventtxt.addEventListener('click', () => switchTab('events', projectstxt, eventtxt));
-    switchTab('events', projectstxt, eventtxt);
+
 
 }
 function switchTab(tab, pn, en) {
     const prsection = document.querySelector('.projects-section');
     const evsection = document.querySelector('.events-section');
     console.log(...arguments);
-    if (tab == 'projects') {
-        pn.className = 'selected-text'; en.className = 'unselected-text';
-        snap('p', evsection);
-    }
-    else if (tab == 'events') {
-        en.className = 'selected-text'; pn.className = 'unselected-text';
+    if (tab == 'events') {
+
+        pn.className = 'unselected-text';
+        en.className = 'selected-text';
         snap('e', evsection);
+    }
+    else if (tab == 'projects') {
+        pn.className = 'selected-text';
+        en.className = 'unselected-text';
+        snap('p', evsection);
+
     }
 }
 
