@@ -187,9 +187,9 @@ header {
 .philosophy img {
 
     position: absolute;
-    top: -40%;
+    bottom: 10%;
     left: 60%;
-    width: 50%;
+    width: 60%;
     transform: translateX(-50%);
     z-index: -100;
 }
