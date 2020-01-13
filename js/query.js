@@ -1,11 +1,17 @@
-function eventCreate(title, discription, date, img) {
+function createRecentEvent(title, discription, img) {
     let event = document.createElement('div');
     let parent = document.querySelector('.events-section');
     event.setAttribute('class', 'event');
-    event.innerHTML = '<div class="title-discription"><h1 class="event-title" >' + title + '</h1><p class="event-discription">' + discription + '</p></div><img src="' + img + '" alt=""><div class="event-date"><h1>' + date + '</h1></div>'
+    event.innerHTML = '<div class="event-img" ><img src="' + img + '" alt=""></div><div class="about-event"><h1>' + title + '</h1><p>' + discription + '</p></div>';
+    parent.insertBefore(event, parent.firstChild);
+}
+function createEvent(title, discription, img) {
+    let event = document.createElement('div');
+    let parent = document.querySelector('.old-events');
+    event.setAttribute('class', 'event');
+    event.innerHTML = '<div class="event-img" ><img src="' + img + '" alt=""></div><div class="about-event"><h1>' + title + '</h1><p>' + discription + '</p></div>';
     parent.appendChild(event);
 }
-
 const call = () => {
     fetch('https://cia.atria.edu/api/v2/events/?format=json', {
         method: 'get'
@@ -20,7 +26,8 @@ const getEvents = () => {
 };
 //call()
 let n = mobileFlag ? 3 : 10;
-/* for (let i = 0; i < n; i++) {
-    eventCreate('Test title', 'test discription', i+'Jan', 'https://blog.printsome.com/wp-content/uploads/big-events-vs-small-events.jpg');
+
+for (let i = 0; i < n; i++) {
+    if (i === 0) createRecentEvent('Test title', 'test disription test disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disription', 'https://blog.printsome.com/wp-content/uploads/big-events-vs-small-events.jpg');
+    else createEvent('Test title', 'test disription test disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disription', 'https://blog.printsome.com/wp-content/uploads/big-events-vs-small-events.jpg');
 }
- */

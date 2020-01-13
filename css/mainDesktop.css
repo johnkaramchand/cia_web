@@ -113,9 +113,6 @@
         z-index: -10;
     }
 
-    .home-img h1,
-    .home-img p {}
-
     .two {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -187,16 +184,11 @@
     .epnav>h1 {
         padding: 2%;
         font-size: 3rem;
-        text-align: center
-    }
-
-    .epnav>h1 strong:nth-child(1) {
-        color: #28CA9B;
-    }
-
-    .epnav>h1 strong {
+        text-align: center;
         cursor: pointer;
+        transition: all 100ms;
     }
+
 
     .epnav {
         position: relative;
@@ -218,7 +210,8 @@
     }
 
 
-    .events-section {
+    .events-section,
+    .projects-section {
         width: 100%;
         height: 80%;
 
@@ -227,7 +220,8 @@
         overflow: hidden;
     }
 
-    .event {
+    .event,
+    .project {
         width: 100%;
         margin: 1%;
         display: flex;
@@ -237,26 +231,29 @@
     }
 
     .event-img,
-    .about-event {
+    .about-event,
+    .project-img,
+    .about-project {
         width: 50%;
         height: 95%;
         margin: 1%;
     }
 
-    .event-img {
+    .event-img,
+    .project-img {
         width: 40%;
     }
 
-    .event-img img {
+    .event-img img,
+    .project-img img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 5px;
     }
 
-    .about-event {}
-
-    .old-events {
+    .old-events,
+    .old-projects {
         width: 100%;
         margin: 1%;
         padding: 1%;
@@ -269,7 +266,8 @@
         box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.178);
     }
 
-    .old-events .event {
+    .old-events .event,
+    .old-projects .projects {
         flex: 0 0 auto;
         width: 50%;
         height: 90%;
@@ -278,12 +276,19 @@
         font-size: small;
     }
 
-    .old-events .event .about-event {
+    .old-events .event .about-event,
+    .old-projects .project .about-project {
         overflow: hidden;
     }
 
 
 }
+
+
+
+/**/
+
+
 
 @media only screen and (max-width: 600px) {
     * {
@@ -520,7 +525,8 @@
 
 
 
-    .events-section {
+    .events-section,
+    .projects-section {
         width: 100%;
         height: 80%;
 
@@ -529,7 +535,8 @@
         overflow: hidden;
     }
 
-    .event {
+    .event,
+    .projects {
         width: 100%;
         margin: 1%;
         display: flex;
@@ -540,17 +547,21 @@
     }
 
     .event-img,
-    .about-event {
+    .about-event,
+    .project-img,
+    .about-project {
         width: 90%;
         height: 95%;
         margin: auto;
     }
 
-    .event-img {
+    .event-img,
+    .project-img {
         margin-bottom: 3%;
     }
 
-    .event-img img {
+    .event-img img,
+    .project-img img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -559,7 +570,8 @@
 
     .about-event {}
 
-    .old-events {
+    .old-events,
+    .old-projects {
         width: 100%;
         margin: 1%;
         padding: 1%;
@@ -572,7 +584,8 @@
         box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.178);
     }
 
-    .old-events .event {
+    .old-events .event,
+    .old-projects .projects {
         flex: 0 0 auto;
         width: 50%;
         height: 90%;
@@ -581,8 +594,23 @@
         font-size: small;
     }
 
-    .old-events .event .about-event {
+    .old-events .event .about-event,
+    .old-projects .project .about-project {
         overflow: hidden;
     }
 
+}
+
+.selected-text {
+    color: #28CA9B;
+    text-transform: uppercase;
+    text-decoration: underline;
+    transition: all 200ms cubic-bezier(.1, 0, 0, 1);
+}
+
+.unselected-text {
+    color: gray;
+    text-transform: lowercase;
+    font-size: 2.3rem;
+    transition: all 200ms cubic-bezier(.1, 0, 0, 1);
 }
