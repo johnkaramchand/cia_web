@@ -1,57 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--texttheme);
+}
+
+body {
+    --bgtheme: white;
+    --texttheme: black;
+    --green-accent: #28CA9B;
+    height: 200vh;
+    background: var(--bgtheme);
+    transition: background 2.5s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.cover-screen {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #0F0F0F;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 500%;
+    z-index: 10;
+}
+
+.cover-screen h1 {
+    color: #64E8B0;
+    pointer-events: none;
+}
+
+.intro-text h1 {
+    letter-spacing: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    position: sticky;
+    width: 100%;
+    height: 10vh;
+}
+
+.nav-items li :hover {
+    color: #28CA9B;
+}
+
+.nav-items li a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.future {
+    width: 50%;
+}
+
+.philosophy {
+    height: 100vh;
+    position: relative;
+}
+
+.philosophy>h1 {
+    padding: 2%;
+    font-size: 3rem;
+    text-align: center
+}
+
 @media only screen and (min-width: 600px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Josefin Sans', sans-serif;
-        color: var(--texttheme);
-    }
-
-    body {
-        --bgtheme: white;
-        --texttheme: black;
-        --green-accent: #28CA9B;
-        height: 200vh;
-        background: var(--bgtheme);
-        transition: background 2.5s;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    .cover-screen {
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: #0F0F0F;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 500%;
-        z-index: 10;
-    }
-
-    .cover-screen h1 {
-        color: #64E8B0;
-        pointer-events: none;
-    }
-
-    .intro-text h1 {
-        letter-spacing: 1000px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    nav {
-        position: sticky;
-        width: 100%;
-        height: 10vh;
-    }
 
     .nav-items {
         height: 100%;
@@ -74,10 +111,6 @@
         transition: color 1s;
     }
 
-    .nav-items li a {
-        text-decoration: none;
-        color: black;
-    }
 
     .nav-items li a:hover {
         color: #28CA9B;
@@ -89,21 +122,9 @@
         font-weight: 1000;
     }
 
-    header {
-        position: relative;
-        width: 100%;
-        height: 90vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        scroll-snap-align: end;
-    }
 
-    .future {
-        width: 50%;
-    }
+
+
 
     .home-img img {
         position: absolute;
@@ -140,16 +161,9 @@
     }
 
 
-    .philosophy {
-        height: 100vh;
-        position: relative;
-    }
 
-    .philosophy>h1 {
-        padding: 2%;
-        font-size: 3rem;
-        text-align: center
-    }
+
+
 
     .philosophy-texts {
         display: grid;
@@ -169,6 +183,7 @@
         left: 50%;
         width: 35%;
         transform: translateX(-50%);
+        pointer-events: none;
     }
 
     .events-projects {
@@ -291,57 +306,6 @@
 
 
 @media only screen and (max-width: 600px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Josefin Sans', sans-serif;
-        color: var(--texttheme);
-    }
-
-    body {
-        --bgtheme: white;
-        --texttheme: black;
-        height: 200vh;
-        background: var(--bgtheme);
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    .cover-screen {
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: #0F0F0F;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 500%;
-        z-index: 10;
-    }
-
-    .cover-screen h1 {
-        color: #64E8B0;
-        pointer-events: none;
-    }
-
-    .intro-text h1 {
-        letter-spacing: 1000px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    nav {
-        position: relative;
-        width: 100%;
-        height: 10vh;
-    }
 
     .about-btn,
     .events-btn,
@@ -370,14 +334,9 @@
         transition: color 1s;
     }
 
-    .nav-items li :hover {
-        color: #28CA9B;
-    }
 
-    .nav-items li a {
-        text-decoration: none;
-        color: black;
-    }
+
+
 
     .cia-tag {
         position: absolute;
@@ -387,21 +346,9 @@
         font-size: 2em;
     }
 
-    header {
-        position: relative;
-        width: 100%;
-        height: 90vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        scroll-snap-align: end;
-    }
 
-    .future {
-        width: 50%;
-    }
+
+
 
     .home-img img {
         position: absolute;
@@ -454,16 +401,9 @@
     }
 
 
-    .philosophy {
-        height: 100vh;
-        position: relative;
-    }
 
-    .philosophy>h1 {
-        padding: 2%;
-        font-size: 3rem;
-        text-align: center
-    }
+
+
 
     .philosophy-texts {
         position: relative;
