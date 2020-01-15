@@ -27,7 +27,7 @@ const getEvents = () => {
 
 let n = 10;
 
-for (let i = 0; i < n; i++) {
+/* for (let i = 0; i < n; i++) {
     if (i === 0) createRecentEvent('Test title', 'test disription test disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disription', 'https://blog.printsome.com/wp-content/uploads/big-events-vs-small-events.jpg','1st Jan 2020');
     else createEvent('Test title', 'test disription test disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disriptiontest disription', 'https://blog.printsome.com/wp-content/uploads/big-events-vs-small-events.jpg', '1st Jan 2020');
-}
+} */

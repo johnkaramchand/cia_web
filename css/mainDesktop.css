@@ -7,7 +7,7 @@
 }
 
 body {
-    --bgtheme: rgb(19, 19, 19);
+    --bgtheme: #151519;
     --texttheme: rgb(238, 238, 238);
     --green-accent: #28CA9B;
     height: 200vh;
@@ -88,16 +88,7 @@ body>header {
     text-align: center
 }
 
-.event-img h1 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding-left: 4%;
-    padding-bottom: 2%;
-    color: var(--texttheme);
-    background: linear-gradient(transparent, black);
-    border-radius: 5px;
-}
+
 
 @media only screen and (min-width: 600px) {
 
@@ -188,124 +179,84 @@ body>header {
         pointer-events: none;
     }
 
-    .events-projects {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        margin-top: 2%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .epnav>h1 {
-        padding: 2%;
-        font-size: 3rem;
-        text-align: center;
-        cursor: pointer;
-        transition: all 100ms;
-    }
-
-
-    .epnav {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 20%;
-        overflow: hidden;
-    }
-
-    .epnav img {
-        position: absolute;
-        right: 10%;
-        top: -15%;
-        width: 40%;
-        object-fit: contain;
-        z-index: -10;
-    }
-
-
-    .events-section,
-    .projects-section {
-        width: 100%;
-        height: 80%;
-
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-    }
-
-    .event,
-    .project {
-        width: 100%;
-        margin: 1%;
-        display: flex;
-        padding: 1%;
-        height: 40vh;
-    }
-
-    .event-img,
-    .about-event,
-    .project-img,
-    .about-project {
-        width: 50%;
-        height: 95%;
-        margin: 1%;
-        position: relative;
-    }
-
-    .event-img,
-    .project-img {
-        width: 40%;
-    }
-
-    .event-img img,
-    .project-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-    }
-
-    .old-events,
-    .old-projects {
-        width: 100%;
-        margin: 1%;
-        padding: 1%;
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        background: white;
-        border-radius: 8px;
-        box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.178);
-    }
-
-    .old-events .event,
-    .old-projects .projects {
-        flex: 0 0 auto;
-        width: 50%;
-        height: 90%;
-        /* background: yellow; */
-        display: flex;
-        font-size: small;
-    }
-
-    .old-events .event .about-event,
-    .old-projects .project .about-project {
-        overflow: hidden;
-    }
-
 
 
 }
 
 /*UNIVERSAL TESTING*/
+.events {
+    height: 100vh;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    background-color: yellow;
+
+}
 
 
+/* leftsection */
+.left-event {
+    padding: 20px;
+    background: var(--bgtheme);
+}
 
+.left-event>h1 {
+    color: var(--green-accent);
+}
+
+.right-event {
+    padding: 10px;
+    background: #111113;
+}
+
+.left-event-child {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.left-event-child-left {}
+
+.event-tag h1 {
+    font-weight: 200;
+    font-size: medium;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.left-event-child-right {}
+
+.event-img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 6px;
+    background: gray;
+    width: 95%;
+    height: 40vh;
+}
+
+.event-img>img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    object-fit: cover;
+}
+
+.about-event{
+    width: 95%;
+}
+.about-event h1{
+    margin-bottom: 10px;
+}
 
 /**/
 @media only screen and (max-width: 600px) {
@@ -408,11 +359,6 @@ body>header {
         text-align: center;
     }
 
-
-
-
-
-
     .philosophy-texts {
         position: relative;
         top: 10%;
@@ -439,126 +385,6 @@ body>header {
         pointer-events: none;
     }
 
-    .events-projects {
-        width: 100%;
-        position: relative;
-        height: 100vh;
-        margin-top: 2%;
-    }
-
-    .epnav>h1 {
-        padding: 2%;
-        font-size: 3rem;
-        text-align: center;
-        cursor: pointer;
-        transition: all 100ms;
-    }
-
-    .epnav {
-        display: flex;
-        justify-content: center;
-    }
-
-    .epnav img {
-        position: absolute;
-        right: 10%;
-        top: 5%;
-        width: 20%;
-        object-fit: contain;
-        z-index: -10;
-        pointer-events: none;
-    }
 
 
-
-
-    .events-section,
-    .projects-section {
-        width: 100%;
-        height: 90%;
-
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        overflow: hidden;
-    }
-
-    .event,
-    .projects {
-        width: 100%;
-        margin: 1%;
-        display: flex;
-        flex-direction: column;
-        padding: 1%;
-        height: 40vh;
-
-    }
-
-    .event-img,
-    .about-event,
-    .project-img,
-    .about-project {
-        width: 90%;
-        height: 95%;
-        margin: auto;
-    }
-
-    .event-img,
-    .project-img {
-        margin-bottom: 3%;
-    }
-
-    .event-img img,
-    .project-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-    }
-
-    .about-event {}
-
-    .old-events,
-    .old-projects {
-        width: 100%;
-        margin: 1%;
-        padding: 1%;
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        background: white;
-        border-radius: 8px;
-        box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.178);
-    }
-
-    .old-events .event,
-    .old-projects .projects {
-        flex: 0 0 auto;
-        width: 50%;
-        height: 90%;
-        /* background: yellow; */
-        display: flex;
-        font-size: small;
-    }
-
-    .old-events .event .about-event,
-    .old-projects .project .about-project {
-        overflow: hidden;
-    }
-
-}
-
-.selected-text {
-    color: #28CA9B;
-    text-transform: uppercase;
-    text-decoration: underline;
-    transition: all 200ms cubic-bezier(.1, 0, 0, 1);
-}
-
-.unselected-text {
-    color: rgb(106, 106, 106);
-    text-transform: lowercase;
-    font-size: 2.3rem;
-    transition: all 200ms cubic-bezier(.1, 0, 0, 1);
 }
