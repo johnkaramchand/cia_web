@@ -204,6 +204,7 @@ body>header {
 
 .left-event>h1 {
     color: var(--green-accent);
+    font-size: large;
 }
 
 .right-event {
@@ -251,12 +252,77 @@ body>header {
     object-fit: cover;
 }
 
-.about-event{
+.about-event {
     width: 95%;
 }
-.about-event h1{
+
+.about-event h1 {
     margin-bottom: 10px;
 }
+
+
+
+
+.right-event {
+    position: relative;
+    padding: 20px;
+    overflow-y: hidden;
+}
+
+.right-event>h1 {
+    font-size: large;
+}
+
+.event-list {
+
+    list-style: none;
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+.event-gradient {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(transparent, #111113, #111113);
+    pointer-events: none;
+}
+
+.event-list li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+
+}
+
+.right-event .date {
+    /* background: white; */
+    display: inline-block;
+    height: 80%;
+    width: 40px;
+    padding-top: 10px;
+}
+
+.right-event .event-img {
+    width: 150px;
+    height: 100px;
+}
+
+.about-event-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15px;
+    margin-top: 15px;
+    width: 50%;
+    height: 100px;
+}
+
+.right-event .about-event h1 {}
 
 /**/
 @media only screen and (max-width: 600px) {
