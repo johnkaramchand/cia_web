@@ -24,7 +24,7 @@ const makeEvent = () => {
 const getEvents = () => {
 
 };
-//call()
+
 let n = 10;
 
 for (let i = 0; i < n; i++) {

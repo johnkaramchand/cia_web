@@ -7,8 +7,8 @@
 }
 
 body {
-    --bgtheme: white;
-    --texttheme: black;
+    --bgtheme: rgb(19, 19, 19);
+    --texttheme: rgb(238, 238, 238);
     --green-accent: #28CA9B;
     height: 200vh;
     background: var(--bgtheme);
@@ -58,7 +58,7 @@ nav {
 
 .nav-items li a {
     text-decoration: none;
-    color: black;
+    color: var(--texttheme);
 }
 
 body>header {
@@ -94,7 +94,7 @@ body>header {
     width: 100%;
     padding-left: 4%;
     padding-bottom: 2%;
-    color: white;
+    color: var(--texttheme);
     background: linear-gradient(transparent, black);
     border-radius: 5px;
 }
@@ -117,7 +117,7 @@ body>header {
         padding: 5%;
         padding-left: 0;
         cursor: pointer;
-        color: black;
+        color: var(--texttheme);
         -webkit-transition: color 1s;
         transition: color 1s;
     }
@@ -304,20 +304,7 @@ body>header {
 
 /*UNIVERSAL TESTING*/
 
-.interest-groups {
-    height: 100vh;
-    width: 100%;
-}
 
-.interest-groups>header {
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* background: orange; */
-}
 
 
 /**/
@@ -381,6 +368,11 @@ body>header {
         left: 10%;
         width: 50%;
         height: 100vh;
+
+    }
+
+    .welcometxt h1 {
+        text-shadow: 10px 10px black;
     }
 
     .two {
