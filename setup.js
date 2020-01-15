@@ -1,7 +1,8 @@
 
 const desktopStyles = [
     'mainDesktop.css',
-    'intrest-groups.css'
+    'intrest-groups.css',
+    'events.css'
 ];
 const mobileStyles = [
     'mainMobile.css'
