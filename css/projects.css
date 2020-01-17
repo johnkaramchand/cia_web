@@ -17,7 +17,7 @@ body {
 
 html {}
 
-.events {
+.projects {
     height: 100vh;
     width: 100%;
 
@@ -27,33 +27,33 @@ html {}
 }
 
 /* leftsection */
-.left-event {
+.left-project {
     padding: 20px;
     background: var(--bgtheme);
 }
 
-.left-event>h1 {
+.left-project>h1 {
     color: var(--green-accent);
     font-size: 1.6rem;
 }
 
-.right-event {
+.right-project {
     padding: 10px;
     background: #111113;
 }
 
-.left-event-child {
+.left-project-child {
     display: grid;
     grid-template-columns: 1fr 8fr;
 }
 
-.left-event-child-left {
+.left-project-child-left {
     display: flex;
     flex-direction: column;
     justify-content: end;
 }
 
-.event-tag {
+.project-tag {
     font-weight: 200;
     font-size: 1rem;
     margin-top: 25px;
@@ -78,9 +78,9 @@ html {}
     text-align: right;
 }
 
-.left-event-child-right {}
+.left-project-child-right {}
 
-.event-img {
+.project-img {
     margin-top: 15px;
     margin-bottom: 15px;
     overflow: hidden;
@@ -90,42 +90,42 @@ html {}
     height: 40vh;
 }
 
-.event-img>img {
+.project-img>img {
     width: 100%;
     height: 100%;
     padding: 0;
     object-fit: cover;
 }
 
-.about-event {
+.about-project {
     width: 95%;
 }
 
-.about-event h1 {
+.about-project h1 {
     margin-bottom: 10px;
 }
 
 
 
 
-.right-event {
+.right-project {
     position: relative;
     padding: 20px;
     overflow-y: hidden;
 }
 
-.right-event>h1 {
+.right-project>h1 {
     font-size: large;
 }
 
-.event-list {
+.project-list {
 
     list-style: none;
     height: 90vh;
     overflow-y: scroll;
 }
 
-.event-gradient {
+.project-gradient {
     position: absolute;
     bottom: 0px;
     left: 0;
@@ -135,7 +135,7 @@ html {}
     pointer-events: none;
 }
 
-.event-list li {
+.project-list li {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -144,7 +144,7 @@ html {}
 
 }
 
-.right-event .date {
+.right-project .date {
     /* background: white; */
     display: inline-block;
     height: 80%;
@@ -153,12 +153,12 @@ html {}
 
 }
 
-.right-event .event-img {
+.right-project .project-img {
     width: 160px;
     height: 90px;
 }
 
-.about-event-right {
+.about-project-right {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -168,29 +168,29 @@ html {}
     height: 100px;
 }
 
-.about-event-right h1 {
+.about-project-right h1 {
     font-size: large;
 }
 
-.about-event-right p {
+.about-project-right p {
     font-size: small;
 }
 
 @media only screen and (max-width: 600px) {
-    .events {
+    .projects {
         display: block;
     }
 
-    .left-event {
+    .left-project {
         display: none;
     }
 
-    .right-event {
+    .right-project {
         width: 100%;
         height: 100%;
     }
 
-    .right-event>h1 {
+    .right-project>h1 {
         font-size: xx-large;
         color: var(--green-accent);
     }

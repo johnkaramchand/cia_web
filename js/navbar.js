@@ -1,4 +1,4 @@
-const snap = (tab, es) => {
+/* const snap = (tab, es) => {
     const t = new TimelineMax();
 
     if (tab == 'p') {
@@ -8,7 +8,7 @@ const snap = (tab, es) => {
         t.fromTo('.events-section', .4, { x: '0', opacity: '1' }, { x: '-200px', opacity: '0', ease: Expo.easeOut });
         t.fromTo('.events-section', .4, { x: '200px', opacity: '0' }, { x: '0', opacity: '1', ease: Expo.easeOut }, '+=.5');
     }
-};
+}; */
 const navbtns = () => {
     const homebtn = document.querySelector('.cia-tag');
     const aboutbtn = document.querySelector('.about-btn');
@@ -16,14 +16,12 @@ const navbtns = () => {
     const eventsbtn = document.querySelector('.events-btn');
     homebtn.addEventListener('click', () => document.querySelector('header').scrollIntoView(false));
     aboutbtn.addEventListener('click', () => document.querySelector('.two').scrollIntoView(true));
-    eventsbtn.addEventListener('click', () => {
-        document.querySelector('.events-projects').scrollIntoView(true)
-        switchTab('events', projectstxt, eventtxt);
+    /* eventsbtn.addEventListener('click', () => {
+        location.href += '/events.html';
     });
     projectsbtn.addEventListener('click', () => {
-        document.querySelector('.events-projects').scrollIntoView(true);
-        switchTab('projects', projectstxt, eventtxt);
-    });
+        location.href = location.href + '/projects.html';
+    }); */
 
     const projectstxt = document.querySelector('#projects-text');
     const eventtxt = document.querySelector('#events-text');

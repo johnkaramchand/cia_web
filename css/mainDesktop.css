@@ -178,6 +178,7 @@ body>header {
         width: 35%;
         transform: translateX(-50%);
         pointer-events: none;
+        z-index: -10;
     }
 
 
