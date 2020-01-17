@@ -409,7 +409,8 @@ main {
 
     .main-page {
         grid-row: 1/2;
-        height: 75vh;
+        height: 100vh;
+        overflow-y: auto;
 
     }
 
