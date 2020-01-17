@@ -16,37 +16,41 @@ const navbtns = () => {
     const eventsbtn = document.querySelector('.events-btn');
     homebtn.addEventListener('click', () => document.querySelector('header').scrollIntoView(false));
     aboutbtn.addEventListener('click', () => document.querySelector('.two').scrollIntoView(true));
-    /* eventsbtn.addEventListener('click', () => {
-        location.href += '/events.html';
-    });
-    projectsbtn.addEventListener('click', () => {
-        location.href = location.href + '/projects.html';
-    }); */
 
-    const projectstxt = document.querySelector('#projects-text');
-    const eventtxt = document.querySelector('#events-text');
-    switchTab('events', projectstxt, eventtxt);
-    projectstxt.addEventListener('click', () => switchTab('projects', projectstxt, eventtxt));
-    eventtxt.addEventListener('click', () => switchTab('events', projectstxt, eventtxt));
 
+    if (mobileFlag) {
+
+        let options = {
+            threshold: .7
+        }
+        let counter = 0;
+        let navcheck = entry => {
+            let target = entry[0].target;
+            let nav = document.querySelector('.bottom-nav');
+            tabs = nav.children;
+            tabs[0].addEventListener('click', () => document.querySelector('header').scrollIntoView(false));
+            tabs[1].addEventListener('click', () => document.querySelector('.two').scrollIntoView(true));
+
+            if (counter > 1) {
+                if (target.className == 'main-nav') {
+                    tabs[0].className = 'selected-tab';
+                    tabs[1].className = '';
+                } else if (target.className == 'two') {
+                    tabs[1].className = 'selected-tab';
+                    tabs[0].className = '';
+                }
+            }
+            else counter++;
+        };
+
+        let observer = new IntersectionObserver(navcheck, options);
+        let sections = document.querySelectorAll('#page-section');
+        sections.forEach(section => observer.observe(section));
+
+    }
 
 }
-function switchTab(tab, pn, en) {
-    const prsection = document.querySelector('.projects-section');
-    const evsection = document.querySelector('.events-section');
-    console.log(...arguments);
-    if (tab == 'events') {
 
-        pn.className = 'unselected-text';
-        en.className = 'selected-text';
-        snap('e', evsection);
-    }
-    else if (tab == 'projects') {
-        pn.className = 'selected-text';
-        en.className = 'unselected-text';
-        snap('p', evsection);
-
-    }
-}
 
 navbtns();
+
