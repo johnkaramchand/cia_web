@@ -405,6 +405,7 @@ main {
         height: 80px;
         border-radius: 100px;
         background: rgb(220, 220, 220);
+
     }
 
     .main-page {
@@ -479,4 +480,9 @@ main {
     }
 
     .nav-section {}
+}
+
+.logo,
+.profile-img {
+    overflow: hidden;
 }
