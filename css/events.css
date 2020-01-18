@@ -30,6 +30,7 @@ html {}
 .left-event {
     padding: 20px;
     background: var(--bgtheme);
+    line-height: 4vh;
 }
 
 .left-event>h1 {
@@ -78,7 +79,9 @@ html {}
     text-align: right;
 }
 
-.left-event-child-right {}
+.event-list .date h1 {
+    text-align: left;
+}
 
 .event-img {
     margin-top: 15px;
@@ -176,13 +179,17 @@ html {}
     font-size: small;
 }
 
+.bottom-nav {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     .events {
         display: block;
     }
 
     .left-event {
-        display: none;
+        height: 100vh;
     }
 
     .right-event {
@@ -193,5 +200,30 @@ html {}
     .right-event>h1 {
         font-size: xx-large;
         color: var(--green-accent);
+    }
+
+    .bottom-nav {
+        position: fixed;
+        bottom: -1px;
+        width: 100%;
+        height: 8%;
+        background-color: rgb(12, 12, 14);
+        box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .bottom-nav a {
+        text-decoration: none;
+        color: var(--texttheme);
+    }
+
+    .selected-tab a {
+        font-size: 1.5rem;
+        color: var(--green-accent);
+        transition: all 100ms;
     }
 }
