@@ -6,76 +6,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/home.css">
-    <title>CIA</title>
+
+    <script src="./setup.js"></script>
+    <title>cia web</title>
 </head>
 
-<body>
-    <header>
-        <section class="one">
-            <ul class="navbar">
-                <li class="home btn"><img src="./assets/img/home.png" alt=""></li>
-                <li class="about btn"><img src="./assets/img/about.png" alt=""></li>
-                <li class="board btn"><img src="./assets/img/board.png" alt=""></li>
-                <li class="stories btn"><img src="./assets/img/stories.png" alt=""></li>
-                <li class="contact btn"><img src="./assets/img/contact.png" alt=""></li>
-            </ul>
-            <div class="title center-text">
-                <h1>CIA</h1>
-                <p>test</p>
-            </div>
-        </section>
 
-        <section class="two">
-            <section class="mainpage">
-                <img class="img" src="./assets/img/cover.svg" alt="">
-                <div>
+<body>
+    <div class="bottom-nav">
+        <h3 class="selected-tab">Home</h3>
+        <h3>About</h3>
+        <h3><a href="./events.html">Events</a></h3>
+        <h3><a href="./projects.html">Projects</a></h3>
+    </div>
+
+    <div class="cover-screen">
+        <div class="intro-text">
+            <h1>CIA</h1>
+        </div>
+    </div>
+    <nav class="main-nav" id="page-section">
+        <ul class="nav-items">
+            <li class="cia-tag">
+                <p>CIA</p>
+            </li>
+            <li class="about-btn">
+                <p>About</p>
+            </li>
+            <li class="events-btn">
+                <a href="./events.html">Events</a>
+            </li>
+            <li class="projects-btn">
+                <a href="./projects.html">Projects</a>
+            </li>
+            <li class="register-btn">
+                <a href="#">Join Us?</a>
+            </li>
+            <li class="login-btn">
+                <a href="./login.html">Log In</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="future">
+            <div class="home-img">
+                <img src="./assets/img/resourcesDark.svg" alt="">
+                <div class="welcometxt">
                     <h1>The Future of Engineering starts here</h1>
                     <p>An open platform for Students to collaborate on engineering problems. Are you a Visioneer ?</p>
                 </div>
-
-            </section>
-            <section class="resources intro-sections">
-                <img class="img" src="./assets/img/resources.svg" alt="">
-                <h1>CIA is the platform that facilitates resources to help your visions become reality</h1>
-            </section>
-            <section class="foreveryone intro-sections">
-                <img class="img" src="./assets/img/everyone.svg" alt="">
-                <h1>Its open for everyone, irrespective of departments, year-of-study, and knowledge levels.</h1>
-            </section>
-            <section class="mentor intro-sections">
-                <img class="img" src="./assets/img/mentor.svg" alt="">
-                <h1>CIA will help bridge every Visioneer with mentors and industry experts</h1>
-            </section>
-            <section class="collab intro-sections">
-                <img class="img" src="./assets/img/collab.svg" alt="">
-                <h1>Its designed Inside-Out as platform to collaborate and build engineering solutions together as a
-                    team. You need a team,
-                    You will find it here.</h1>
-            </section>
-        </section>
-
-
-        <div class="about-page pages">
-            <iframe src="./about.html" frameborder="0"></iframe>
-        </div>
-
-        <div class="board-page pages">
-            <iframe src="./board.html" frameborder="0"></iframe>
-        </div>
-
-        <div class="story-page pages">
-            <iframe src="./story.html" frameborder="0"></iframe>
-        </div>
-
-        <div class="contact-page pages">
-            <iframe src="./contact.html" frameborder="0"></iframe>
+            </div>
         </div>
     </header>
-    <script src="./src/js/listeners.js"></script>
-    <script src="./src/js/mathPart.js"></script>
-    <script src="./src/js/scrollManager.js"></script>
 
+    <section id="page-section" class="two">
+        <div>
+            <img src="./assets/img/resource.svg" alt="">
+            <h1>Resources</h1>
+            <p>CIA is the platform that facilitates resources to help your visions become reality</p>
+        </div>
+        <div>
+            <img src="./assets/img/everyone.svg" alt="">
+            <h1>For everyone, Always!</h1>
+            <p>CIA is the platform that facilitates resources to help your visions become reality</p>
+        </div>
+        <div>
+            <h1>Mentorship</h1>
+            <p>CIA is the platform that facilitates resources to help your visions become reality</p>
+        </div>
+        <div>
+            <h1>Collaboration</h1>
+            <p>CIA is the platform that facilitates resources to help your visions become reality</p>
+        </div>
+    </section>
+
+    <section class="philosophy">
+        <h1>Philosophy</h1>
+        <div class="philosophy-texts">
+            <div>
+                <h1>By Students! For Students!</h1>
+                <p>Its designed and run by students for students.</p>
+            </div>
+            <div>
+                <h1>For Everyone</h1>
+                <p>We belive the future of engineering is the confluence of all domains, CIA is always for students of
+                    all domains.</p>
+            </div>
+            <div>
+                <h1>Failure is Celebrated</h1>
+                <p>You dont need to have the greatest idea, the biggest brains or fancy tech. If you have any
+                    idea/interest, CIA will help
+                    make that a reality.
+                </p>
+            </div>
+            <div>
+                <h1>Bridge Industry - Education Gap</h1>
+                <p>It takes many years for the lastest tech to reach academin books, CIA is the platform to explore the
+                    lastest trends in
+                    Enginnering.
+                </p>
+            </div>
+        </div>
+        <img src="./assets/img/phil.svg" alt="">
+    </section>
+
+    <d class="intrest-groups">
+        <text>
+            <h1>Interest Groups</h1>
+            <p>Colaborate with people with<br> Silimar Intrests and Build Major Projects</p>
+            <br>
+            <a href="./interest-groups.html">Join a group?</a>
+        </text>
+        <div>
+            <img src="./assets/img/interestGroups.svg" alt="" srcset="">
+        </div>
+        <main class="bgxt">
+            <h1>Machine Learning</h1>
+            <h1>Compiler Design</h1>
+            <h1>Block Chain</h1>
+            <h1>Cyber Security</h1>
+        </main>
+        </section>
+
+        <section class="services">
+
+
+        </section>
+
+        <!-- 
+    <section class="interest-groups">
+        <header>
+            <h1>Interest Groups</h1>
+        </header>
+
+    </section> -->
+
+        <script src="./js/gsap/css.js"></script>
+        <script src="./js/gsap/tlm.js"></script>
+        <script src="./js/gsap/tm.js"></script>
+        <!-- <script src="./js/zoom.js"></script> -->
+
+        <script src="./js/intro.js"></script>
+
+        <script src="./js/query.js"></script>
+
+        <script src="./js/events.js"></script>
+        <script src="./js/navbar.js"></script>
+        <script src="./js/main.js"></script>
 </body>
 
 </html>
