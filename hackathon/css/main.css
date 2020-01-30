@@ -314,9 +314,10 @@ img {
 
 /* sponsors */
 .footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
+    right: 0;
     height: 40px;
     width: 100%;
     background-color: #40a075;
