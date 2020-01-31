@@ -1,6 +1,7 @@
 :root {
     --textColor: white;
     --bgColor: #00010F;
+    --accentColor: #64E8B0;
 }
 
 * {
@@ -20,6 +21,7 @@ body {
     position: relative;
     height: 100vh;
     width: 100%;
+    padding: 50px;
 }
 
 .img1,
@@ -50,16 +52,15 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    line-height: calc(1.5*3rem);
 }
 
 .landing-text h1,
 .landing-text h3 {
-    margin-left: 50px;
+    text-transform: uppercase;
 }
 
 #cia-title {
-    font-size: 4rem;
+    font-size: 5rem;
     color: #64E8B0;
 }
 
@@ -67,26 +68,102 @@ img {
     font-size: 4rem;
 }
 
-@media only screen and (max-width: 1000px) {
+.fade {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(transparent, black);
+}
+
+.fade span {
+    position: relative;
+    font-weight: bold;
+}
+
+.fade .down-arrow {
+    position: relative;
+    margin-top: 5px;
+    filter: invert();
+    width: 25px;
+    height: 25px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+    100%,
+    0% {
+        top: 10px;
+    }
+
+    50% {
+        top: 0px;
+    }
+}
+
+/* ABOUT */
+.about {
+    height: 100vh;
+    width: 100%;
+    padding: 50px;
+    padding-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about>h1 {
+    color: var(--accentColor);
+    margin-bottom: 10px;
+}
+
+.about>p{
+    font-size: 1.2rem;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: calc(1.4*1.2rem);
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
     .landing-text {
         height: 70%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        line-height:30px;
     }
 
     .landing-text h1,
     .landing-text h3 {
-        margin-left: 0px;
+        margin-left: 20px;
+        margin-top: 10px;
+        text-transform: uppercase;
     }
 
     #cia-title {
-        font-size: 2rem;
+        font-size: 3rem;
         color: #64E8B0;
     }
 
     #hackathon {
-        font-size: 2rem;
+        font-size: 3rem;
+    }
+
+    .img1 {
+        width: 90vw;
+    }
+
+    .img2 {
+        width: 80vw;
     }
 }
