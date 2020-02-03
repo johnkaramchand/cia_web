@@ -1,6 +1,6 @@
 
 const desktopStyles = [
-    'mainDesktop.css',
+    'mainDesktop.min.css',
 ];
 const mobileStyles = [
     'mainMobile.css'
