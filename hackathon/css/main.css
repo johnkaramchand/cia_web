@@ -106,6 +106,16 @@ img {
     animation: bounce 1s infinite;
 }
 
+.landing-shade {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100px;
+    background: linear-gradient(to right, transparent, rgb(0, 0, 5));
+    
+}
+
 @keyframes bounce {
 
     100%,
@@ -117,6 +127,8 @@ img {
         top: 0px;
     }
 }
+
+
 
 /* ABOUT */
 .about {
@@ -234,14 +246,7 @@ img {
 
 }
 
-.schedule-section .scroll-shade {
-    position: absolute;
-    right: 5px;
-    top: 0;
-    height: 100%;
-    width: 100px;
-    background: linear-gradient(to right, transparent, rgb(0, 0, 5));
-}
+
 
 .schedule-section>h3 :nth-child(1) {
     font-weight: 400;
@@ -261,7 +266,7 @@ img {
     display: inline-block;
     width: auto;
     height: 100%;
-    
+
     padding: 0px 20px 0px 20px;
 
 }
