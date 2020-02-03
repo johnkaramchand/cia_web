@@ -112,6 +112,7 @@ img {
     top: 0;
     height: 100%;
     width: 100px;
+    pointer-events: none;
     background: linear-gradient(to right, transparent, rgb(0, 0, 5));
     
 }
