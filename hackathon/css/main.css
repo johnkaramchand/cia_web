@@ -106,7 +106,7 @@ img {
     animation: bounce 1s infinite;
 }
 
-.landing-shade {
+.landing-shade,.scroll-shade {
     position: absolute;
     right: 0;
     top: 0;
@@ -260,6 +260,9 @@ img {
 .day :nth-child(1) {
     padding-left: 0;
 }
+.day :last-child{
+    padding-right: 20px;
+}
 
 .schedule-card {
     margin-top: 20px;
@@ -280,7 +283,7 @@ img {
 }
 
 .card-content p {
-    word-break: break-all;
+    word-break: normal;
     white-space: normal;
     width: 400px;
 }
