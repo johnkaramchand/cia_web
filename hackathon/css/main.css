@@ -514,3 +514,14 @@ img {
     }
 
 }
+
+@media only screen and (max-width: 600px) {
+    .about {
+        height: auto;
+    }
+
+    .about p{
+        line-height: 25px;
+        font-size: 1.2rem;
+    }
+}
