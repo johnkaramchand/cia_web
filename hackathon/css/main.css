@@ -304,7 +304,7 @@ img {
     display: flex;
     flex-direction: column;
     position: relative;
-    
+
 }
 
 .card-content::after {
@@ -343,9 +343,114 @@ img {
     font-weight: 400;
 }
 
+/* TRACKS */
+.tracks {
+    background-color: rgb(0, 0, 5);
+    height: auto;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    /* background: orange; */
+
+}
+
+.track-title {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+.track-section {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    background: rgb(15, 15, 15);
+
+}
+
+.track-card {
+    margin-top: 20px;
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    padding-right: 20px;
+    /* padding: 0px 20px 0px 20px; */
+}
+
+.track-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+
+.track-content p {
+    word-break: normal;
+    white-space: normal;
+    width: 400px;
+}
+
+.track-content h1,
+.track-content p {
+    margin: 5px 0 0px 0px;
+}
+
+.track-content :nth-child(1) {
+    font-weight: 600;
+    color: var(--accentColor);
+}
+
+.track-content :nth-child(2) {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+.track-content h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.track-scroll-shade {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+    background: linear-gradient(to right, transparent, rgb(0, 0, 5));
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
 
 /* MOBILE */
 @media only screen and (max-width: 600px) {
+
+    .track-content p {
+        word-break: normal;
+        white-space: normal;
+        width: 300px;
+        line-height: 1.5rem;
+    }
+
+    .track-scroll-shade {
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        z-index: 10;
+        background: linear-gradient(to right, transparent, rgba(0, 0, 5,.7), rgb(0, 0, 5));
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+    }
+
     .landing-text {
         height: 70%;
         display: flex;
