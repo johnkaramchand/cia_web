@@ -80,7 +80,18 @@ function updateUI(events) {
     if (events.length === 1) {
         events[0].tag = 'Latest';
         createRecentEventCard(events[0]);
-        document.querySelector('.right-event').style.display='none';
+        document.querySelector('.right-event').style.display = 'none';
+        let left = document.querySelector('.left-event');
+        let eventsBlock = document.querySelector('.events');
+        eventsBlock.style.setProperty('grid-template-columns','1fr');
+        let RighteventsBlock = document.querySelector('.left-event-child-right');
+        RighteventsBlock.style.setProperty('display','flex');
+        RighteventsBlock.style.setProperty('height', '80vh');
+        let aboutevent = document.querySelector('.about-event');
+        aboutevent.style.setProperty('margin-left','15px');
+        aboutevent.style.setProperty('margin-top', '15px');
+        left.style.width = '100%';
+        document.querySelector('.event-img').style.height='70vh';
     } else {
         events.forEach((event, i) => {
             if (i === 0) {
