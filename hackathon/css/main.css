@@ -163,16 +163,40 @@ img {
 
 /* CIA 2019 */
 .cia19 {
-    height: 100vh;
+    height: auto;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 50px;
+    background: var(--darkerBg);
 
 }
 
 .cia19 h1 {
     color: var(--accentColor);
+
+}
+
+.photos-old {
+    margin-top: 20px;
+
+    overflow: auto;
+    white-space: nowrap;
+
+}
+
+.img {
+    display: inline-block;
+    width: 100%;
+    height: 70vh;
+}
+
+.img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.i1>img {
+    object-fit: contain;
 }
 
 /* FAQSECTION */
@@ -241,7 +265,6 @@ img {
     height: auto;
     overflow: auto;
     white-space: nowrap;
-
     margin-top: 15px;
     margin-bottom: 15px;
 
@@ -482,7 +505,7 @@ footer {
     line-height: 22px;
 }
 
-.contact-section a{
+.contact-section a {
     color: var(--accentColor);
 }
 
