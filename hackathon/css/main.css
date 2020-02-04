@@ -373,6 +373,10 @@ img {
 
 }
 
+.track-section :nth-child(5) {
+    padding-right: 50%;
+}
+
 .track-card {
     margin-top: 20px;
     display: inline-block;
@@ -440,12 +444,16 @@ img {
         line-height: 1.5rem;
     }
 
+    .track-section :last-child {
+        padding-right: 20px;
+    }
+
     .track-scroll-shade {
         position: absolute;
         width: 20%;
         height: 100%;
         z-index: 10;
-        background: linear-gradient(to right, transparent, rgba(0, 0, 5,.7), rgb(0, 0, 5));
+        background: linear-gradient(to right, transparent, rgba(0, 0, 5, .7), rgb(0, 0, 5));
         right: 0;
         bottom: 0;
         pointer-events: none;
