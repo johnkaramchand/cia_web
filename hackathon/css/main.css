@@ -2,6 +2,7 @@
     --textColor: white;
     --bgColor: #00010F;
     --accentColor: #64E8B0;
+    --darkerBg: rgb(0, 0, 5);
 }
 
 * {
@@ -432,6 +433,59 @@ img {
     pointer-events: none;
 }
 
+/* SPONSORS */
+.sponsor-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--darkerBg);
+
+}
+
+.sponsor-section>h1 {
+    color: var(--accentColor);
+}
+
+.mlh-logo {
+    margin-top: 30px;
+    width: 200px;
+}
+
+.mlh-logo>img {
+    width: 100%;
+}
+
+footer {
+
+    width: 100%;
+    height: auto;
+    padding: 50px;
+
+    background: rgb(10, 10, 15);
+
+    display: flex;
+    align-items: stretch;
+}
+
+.contact-section {
+    height: 200px;
+}
+
+.contact-section>h3 {
+    padding-bottom: 18px;
+}
+
+.contact-section>p {
+    line-height: 22px;
+}
+
+.contact-section a{
+    color: var(--accentColor);
+}
+
 /* MOBILE */
 @media only screen and (max-width: 600px) {
 
@@ -522,9 +576,9 @@ img {
 }
 
 @media only screen and (max-width: 400px) {
-    .faq{
+    .faq {
         height: auto;
         padding-top: 20px;
-        padding-bottom:20px ;
+        padding-bottom: 20px;
     }
 }
