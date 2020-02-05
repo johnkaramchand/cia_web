@@ -29,12 +29,21 @@ main {
     right: 0;
     top: 0;
     width: 80%;
-    height: 100%;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .bg-img {
+        
+        width: 100%;
+     
+    }
 }
 
 .bg-img img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 /* UNIVERSAL */
@@ -106,7 +115,7 @@ main {
 .button-section {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 400px;
     height: auto;
 }
 
