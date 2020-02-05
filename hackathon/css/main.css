@@ -103,16 +103,13 @@ img {
     text-align: center;
 }
 
-.intro-logo-img {
 
-    
-}
-
-.intro-logo-img img{
+.intro-logo-img img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
 .img1 {
     bottom: 0;
     left: 0;
@@ -707,7 +704,8 @@ footer {
     .faq {
         height: auto;
         background-color: rgb(0, 0, 5);
-
+        padding-left: 0px;
+        padding-right: 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
