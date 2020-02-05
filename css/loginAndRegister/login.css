@@ -159,9 +159,8 @@ button {
         display: flex;
         position: relative;
         flex-direction: column;
-        /* background: blue; */
     }
-
+    
     form input {
         border: none;
         background: #1a1a22;
@@ -170,5 +169,6 @@ button {
         border-radius: 4px;
         outline: none;
         padding-left: 10px;
+        /* background: blue; */
     }
 }

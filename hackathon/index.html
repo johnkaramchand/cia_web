@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,600i,700,700i&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <title>CIA MLH</title>
+    <script src="./js/events.js" defer></script>
 </head>
 
 <body>
     <div class="landing">
+        <div class="landing-shade"></div>
         <div class="img1">
             <img src="./img/notstlinesAsset 3@4x Copy.png" alt="">
         </div>
@@ -22,137 +25,238 @@
         <div class="landing-text">
             <h1 id="cia-title">CIA</h1>
             <h1 id="hackathon">HACKATHON</h1>
-            <h3>ATRIA INSTITUTE OF TECHNOLOGY</h3>
+            <h3>Solve Build Grow</h3>
+        </div>
+        <div class="fade">
+            <span>MORE</span>
+            <div class="down-arrow">
+                <img src="https://img.icons8.com/material/24/000000/expand-arrow--v1.png">
+            </div>
         </div>
     </div>
-    <!--John-->
-    <div id="preguntas">
-        <h1 id="cia-title">About</h1>
-        <!-- <h1 id="hackathon">CIA HAck</h1> -->
-        <h3>ATRIA'S BIGGEST TINKERING PLAYGROUND</h3>
-
-
-        <div id="header">
-          <h1 id="about-heading">30 hours of Fun Engineering</h1>
-          <h4 class="about">
-            CIA Hackathon aims at bringing together engineers, designers, and students to hack and build life-changing solutions using rapid prototyping techniques. CIA Hackathon is a 30-hour event which will be held at Atria Institute of Technology on the 14 and 15 of March, 2020. The vision of CIA Hackathon is to identify and solve problems in improving the lives of the common man and harness technology to creatively demonstrate ideas.
-          </h4>
-        </div>
-
-        <h1 id="cia-title">CIA Hack'19</h1>
-        <!-- <h1 id="hackathon">HACKATHON</h1> -->
-        <h3>Previous Editions</h3>
-
-        <!--previous-->
-<div class="previous">
-            <!-- Slideshow container -->
-<div class="slideshow-container">
-
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 4</div>
-      <img src="./img/previous1 (1).JPG" style="width:100%">
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 4</div>
-      <img src="./img/previous1 (2).jpg" style="width:100%">
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 4</div>
-      <img src="./img/previous1 (3).jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-        <div class="numbertext">4 / 4</div>
-        <img src="./img/previous1 (4).jpg" style="width:100%">
-      </div>
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-  
-  <!-- The dots/circles -->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-  </div>
-</div>
-        <!--previous-->
-    
-        <h1 id="cia-title">FaQ</h1>
-        <!-- <h1 id="hackathon">HACKATHON</h1> -->
-        <h3 style="margin-bottom: 15px;">Details to get you started</h3>
-
-        <h3 class="faq-h3">I do not know anything technical. Can i take part ?</h3>
-        <div class="respuesta">
-            <p>Yes !! All that’s required is crazy interest.</p>
-        </div>
-        <h3 class="faq-h3">Is there any registration fee? </h3 class="faq-h3">
-        <div class="respuesta">
-            <p>No !!</p>
-        </div>
-        <h3 class="faq-h3">Is it mandatory to stay back overnight</h3 class="faq-h3">
-        <div class="respuesta">
-            <p>No, But you are going to miss the fun</p>
-        </div>
-        <h3 class="faq-h3">Where is it happening ?   </h3 class="faq-h3">
-        <div class="respuesta">
-          <p>
-              Atria Institute of Technology
+    <div class="about">
+        <h1>ABOUT</h1>
+        <p>CIA Hackathon aims at bringing together engineers, designers, and students to hack and build life-changing
+            solutions
+            using rapid prototyping techniques. CIA Hackathon is a 24-hour event which will be held at Atria Institute
+            of Technology
+            on the x and y of April, 2020. The vision of CIA Hackathon is to identify and solve problems in improving
+            the lives of
+            the common man and harness technology to creatively demonstrate ideas.
         </p>
-        </div>
-        <h3 class="faq-h3">What is a hackathon?</h3 class="faq-h3">
-        <div class="respuesta">
-          <p>
-            Hack + Marathon  =  Build something different | think out of the box + Marathon
-          </p>
-        </div>
-        <h3 class="faq-h3">If selected will we get components: </h3 class="faq-h3">
-        <div class="respuesta">
-          <p>
-            Cia will launch out a component list that we can provide. Reachout to us for more on this.        </p>
-        </div>
-        <h3 class="faq-h3">Who and how should I contact ?</h3 class="faq-h3">
-        <div class="respuesta">
-            <p>TBA</p>
-        </div>
-        <h3 class="faq-h3">I already have an idea, can I use it at the hackathon? </h3 class="faq-h3">
-        <div class="respuesta">
-            <p>Yes, provided you substantially improve your project.</p>
-        </div>
-    
-        <a href="#" id="cerrartodas">Close all</a>
-<!--sponsor-->
-<div class="sponsor">
-        <h1 id="cia-title">Sponsors/Partners</h1>
-        <!-- <h1 id="hackathon">HACKATHON</h1> -->
-        <h3 style="margin-bottom: 15px;">Together we amplify impact. </h3>
-        <div style="text-align: center;">
-            <h1 id="about-heading">Comming Soon</h1>
-            <h4 class="about">
-                Want to sponsor us? Write to communities.atria@gmail.com
-            </h4>
-          </div>
-
     </div>
-<!--sponsor -->
-      </div> <!--global container-->
 
-      <div class="footer">
-        <p style="padding: 10px;">#CommunitiesInAtria</p>
-      </div>
+    <div class="cia19">
+        <h1>CIA HACK 2019</h1>
+        <div class="photos-old">
+            <div class="i4 img">
+                <img src="./img/photos/IMG_20190414_204411.jpg" alt="" srcset="">
+            </div>
+            <div class="i2 img">
+                <img src="./img/photos/IMG_20190413_234903.jpg" alt="" srcset="">
+            </div>
+            <div class="i3 img">
+                <img src="./img/photos/IMG_20190414_131709.jpg" alt="" srcset="">
+            </div>
+            <div class="i1 img">
+                <img src="./img/photos/IMG_20190413_224344.jpg" alt="" srcset="">
+            </div>
+            
+           
+            
+            
+        </div>
+    </div>
+
+    <div class="schedule">
+        <div class="schedule-title">
+            <h1>The Schedule</h1>
+        </div>
+        <div class="schedule-section">
+            <div class="scroll-shade"></div>
+            <h3><span>Saturday</span><span> March 14th</span></h3>
+            <div class="day1 day"></div>
+
+            <h3><span>Sunday</span><span> March 15th</span></h3>
+            <div class="day2 day"></div>
+        </div>
+    </div>
+
+    <div class="tracks">
+        <div class="track-title">
+            <h1>Tracks/Themes</h1>
+        </div>
+        <div class="track-scroll-shade"></div>
+        <div class="track-section">
 
 
-      
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./css/index.js"></script>
+            <div class="track-card">
+                <div class="track-content">
+                    <h1>Mobility</h1>
+                    <p>Mobility is changing rapidly and we as a civilisation are at the cusp of electric transformation
+                        at
+                        scale. But this
+                        domain also has few questions unanswered at scale. You can solve any problem pertaining to the
+                        problems of mobility.
+                        Electric Vehicles, Autonomous Vehicles, Automotive Battery Management Systems, Aerodynamics,
+                        Avionics, Unmanned Aerial
+                        Systems, and Mass Transportation are some of the streams that lead down this path.
+                    </p>
+                </div>
 
-    <!--John-->
+            </div>
+
+            <div class="track-card">
+                <div class="track-content">
+                    <h1>Digital transformation</h1>
+                    <p>Technology is revolutionizing every domain out there. Artificial Intelligence is lurking at
+                        various
+                        use cases to solve
+                        problems at scale. AR/VR is changing our perspective of the world around and Data Science is
+                        helping
+                        us harness the 21st
+                        century data set. This theme pertains to these technologies that transform anything and
+                        everything
+                        in their path.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="track-card">
+                <div class="track-content">
+                    <h1>Healthcare</h1>
+                    <p>Out of all domains technology is having an impact, the most important one is Healthcare. From
+                        helping
+                        hospitals to self
+                        diagnosis, technology can and will eventually increase its presence in the domain of heath. You
+                        are
+                        encouraged to solve
+                        any problem that can have digital and technological applications in this domain
+                    </p>
+                </div>
+            </div>
+
+            <div class="track-card">
+                <div class="track-content">
+                    <h1>EdTech</h1>
+                    <p>Traditional learning is quickly getting out-of-context. Interactive and output driven concepts
+                        have
+                        to be employed to
+                        teach and equip students for 21st century requirements. Design any technological solution to
+                        change
+                        and/or transform the
+                        current education system. Your novelty is the need of the hour !!
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="track-card">
+                <div class="track-content">
+                    <h1>FinTech</h1>
+                    <p>With over 2 lakh crore in digital UPI payments, India is quickly moving to a digital, cashless
+                        system. Design and build
+                        solutions that harness this trend, makes sure that the rural population are not left out and
+                        privacy
+                        and security are at
+                        the forefront. You may also build fintech solutions on blockchain technologies.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="faq">
+        <div class="questions">
+            <h1>FREQUENTLY ASKED QUESTIONS</h1>
+            <div class="question">
+                <h3>I do not know anything technical. Can i take part?</h3>
+                <div class="answer">
+                    <p>- Yes !! All that’s required is crazy interest.
+                    </p>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>Is there any registration fee?</h3>
+                <div class="answer">
+                    <p>- No</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>Is it mandatory to stay back overnight, if selected?</h3>
+                <div class="answer">
+                    <p>- No, but you will miss the campfire sessions.</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>Where is it happening?</h3>
+                <div class="answer">
+                    <p>- Atria Institute of Technology.</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>What is a hackathon?</h3>
+                <div class="answer">
+                    <p>- Hack + Marathon = Build something different | think out of the box + Marathon</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>Will the Components be provided?</h3>
+                <div class="answer">
+                    <p>- Cia will launch out a component list that we can provide. Reachout to us for more on this.</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>Who and how should i contact?</h3>
+                <div class="answer">
+                    <p>- TBA</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>I already have an idea, can i use it at the hackathon?
+                </h3>
+                <div class="answer">
+                    <p>- Yes, provided you substantially improve your project.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="sponsor-section">
+        <h1>Event Partner</h1>
+        <div class="mlh-logo">
+            <img src="https://static.mlh.io/brand-assets/logo/official/mlh-logo-white.svg">
+        </div>
+    </div>
+    <footer>
+        <div class="contact-section">
+            <h3>Contact</h3>
+            <p>Mail us at <a href="#">communities.atria@gmail.com</a></p>
+            <p>call us at +91 123 456 1232</p>
+            <p class="adress">
+                <a style=" margin-top:10px; display:block;"
+                    href="https://www.google.com/maps/place/Atria+Institute+of+Technology/@13.0325489,77.5899031,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae17bd97727093:0x5135aab8250c1df5!8m2!3d13.0325489!4d77.5920918?hl=en-US"
+                    target="_blank">Adress at</a>
+                ASKB Campus,<br> 1st Main Rd, Ags Colony,<br> Anandnagar, Hebbal,<br> Bengaluru, Karnataka 560024
+            </p>
+        </div>
+    </footer>
+
+
 </body>
 
 </html>
