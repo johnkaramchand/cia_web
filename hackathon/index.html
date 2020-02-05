@@ -10,11 +10,21 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <title>CIA MLH</title>
+    <script src="./js/navigation.js" defer></script>
     <script src="./js/events.js" defer></script>
+
 </head>
 
 <body>
-    <div class="landing">
+
+    <a href="https://my.mlh.io/oauth/authorize?client_id=c5f044c4c6b8f82817fa618616557a8bb860925b8d65cbad1ffd9e44cc5edaa3"
+        target="_blank">
+        <div class="register-btn">
+            <h3>REGISTER NOW</h3>
+        </div>
+    </a>
+
+    <div class="landing" id="home">
         <div class="landing-shade"></div>
         <div class="img1">
             <img src="./img/notstlinesAsset 3@4x Copy.png" alt="">
@@ -28,13 +38,13 @@
             <h3>Solve Build Grow</h3>
         </div>
         <div class="fade">
-            <span>MORE</span>
+            <span><a href="#about">MORE</a></span>
             <div class="down-arrow">
                 <img src="https://img.icons8.com/material/24/000000/expand-arrow--v1.png">
             </div>
         </div>
     </div>
-    <div class="about">
+    <div class="about" id="about">
         <h1>ABOUT</h1>
         <p>CIA Hackathon aims at bringing together engineers, designers, and students to hack and build life-changing
             solutions
@@ -46,9 +56,10 @@
         </p>
     </div>
 
-    <div class="cia19">
+    <div class="cia19" id="cia-hack">
         <h1>CIA HACK 2019</h1>
         <div class="photos-old">
+
             <div class="i4 img">
                 <img src="./img/photos/IMG_20190414_204411.jpg" alt="" srcset="">
             </div>
@@ -61,14 +72,11 @@
             <div class="i1 img">
                 <img src="./img/photos/IMG_20190413_224344.jpg" alt="" srcset="">
             </div>
-            
-           
-            
-            
+
         </div>
     </div>
 
-    <div class="schedule">
+    <div class="schedule" id="schedule">
         <div class="schedule-title">
             <h1>The Schedule</h1>
         </div>
@@ -82,7 +90,7 @@
         </div>
     </div>
 
-    <div class="tracks">
+    <div class="tracks" id="tracks">
         <div class="track-title">
             <h1>Tracks/Themes</h1>
         </div>
@@ -171,7 +179,7 @@
 
 
 
-    <div class="faq">
+    <div class="faq" id="faq">
         <div class="questions">
             <h1>FREQUENTLY ASKED QUESTIONS</h1>
             <div class="question">
@@ -246,6 +254,7 @@
             <h3>Contact</h3>
             <p>Mail us at <a href="#">communities.atria@gmail.com</a></p>
             <p>call us at +91 123 456 1232</p>
+            <p>DM us at <a href="https://www.instagram.com/cia_together/" target="_blank">@cia_together</a></p>
             <p class="adress">
                 <a style=" margin-top:10px; display:block;"
                     href="https://www.google.com/maps/place/Atria+Institute+of+Technology/@13.0325489,77.5899031,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae17bd97727093:0x5135aab8250c1df5!8m2!3d13.0325489!4d77.5920918?hl=en-US"
@@ -253,6 +262,16 @@
                 ASKB Campus,<br> 1st Main Rd, Ags Colony,<br> Anandnagar, Hebbal,<br> Bengaluru, Karnataka 560024
             </p>
         </div>
+        <nav class="links">
+            <h3>Go to</h3>
+            <p><a href="#about">About</a></p>
+            <p><a href="#cia-hack">CIA hack 2019</a></p>
+            <p><a href="#schedule">Schedule</a></p>
+            <p><a href="#tracks">Tracks and Theme</a></p>
+            <p><a href="#faq">FAQ</a></p>
+            <p><a href="#home">Home</a></p>
+            <p><a href="https://my.mlh.io/oauth/authorize?client_id=c5f044c4c6b8f82817fa618616557a8bb860925b8d65cbad1ffd9e44cc5edaa3">Register</a></p>
+        </nav>
     </footer>
 
 </body>
