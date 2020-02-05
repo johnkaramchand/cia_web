@@ -64,6 +64,7 @@ p::selection {
     text-decoration: none;
     line-height: 10px;
     margin-top: 4px;
+    text-align: center;
 }
 
 
