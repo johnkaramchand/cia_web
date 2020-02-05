@@ -10,7 +10,7 @@
     function navCheck(enteries) {
         if (enteries[0].isIntersecting) {
             registerbtn.style.opacity = '0';
-            registerbtn.style.setProperty('pointer-events','none');
+            registerbtn.style.setProperty('pointer-events', 'none');
         }
         else {
             registerbtn.style.opacity = '1';
@@ -18,7 +18,7 @@
         }
     }
     observer.observe(landing);
-    let sections=[
+    let sections = [
         document.querySelector('.about'),
         document.querySelector('.cia19'),
         document.querySelector('.schedule'),
@@ -26,9 +26,12 @@
         document.querySelector('.faq'),
         document.querySelector('.landing'),
     ]
-    document.querySelectorAll('.links p').forEach((element,i)=>{
-        element.addEventListener('click',()=>{
-            sections[i].scrollIntoView(); 
+    document.querySelector('.fade>span').addEventListener('click', () => {
+        sections[0].scrollIntoView();
+    });
+    document.querySelectorAll('.links p').forEach((element, i) => {
+        element.addEventListener('click', () => {
+            sections[i].scrollIntoView();
         })
     })
 
