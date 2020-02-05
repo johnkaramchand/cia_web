@@ -602,13 +602,16 @@ footer {
 .links a {
     color: rgb(119, 119, 119);
     text-decoration: none;
+    pointer-events: none;
 }
 
-.links a:hover {
+.links p:hover a {
     text-decoration: underline;
 }
 
-.links>p {}
+.links>p {
+    cursor: pointer;
+}
 
 .logo {
 
@@ -630,7 +633,7 @@ footer {
 }
 
 /* MOBILE */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
 
     .register-btn {
         bottom: 0;

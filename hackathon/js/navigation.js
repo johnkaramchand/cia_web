@@ -18,4 +18,18 @@
         }
     }
     observer.observe(landing);
+    let sections=[
+        document.querySelector('.about'),
+        document.querySelector('.cia19'),
+        document.querySelector('.schedule'),
+        document.querySelector('.tracks'),
+        document.querySelector('.faq'),
+        document.querySelector('.landing'),
+    ]
+    document.querySelectorAll('.links p').forEach((element,i)=>{
+        element.addEventListener('click',()=>{
+            sections[i].scrollIntoView(); 
+        })
+    })
+
 })();
