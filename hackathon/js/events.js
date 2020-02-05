@@ -115,4 +115,9 @@
             }
         })
     });
+    document.querySelectorAll('img').forEach(img => {
+        img.onload = () => {
+            img.style.opacity = 1;
+        }
+    });
 })();
