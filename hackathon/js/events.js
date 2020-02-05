@@ -74,6 +74,7 @@
             {
                 title: 'Winners Announcement',
                 from: '3pm',
+                to: '4pm',
                 d: 'The winner will be announced of all domains, and the Hackathon will be concluded with the valedictory ceremony.'
             }
         ]
@@ -122,6 +123,7 @@
         setTimeout(() => {
             img.style.opacity = 1;
         }, 1000);
+        if (img.getAttribute('data-src')) img.src = img.getAttribute('data-src');
     });
 
 })();

@@ -114,7 +114,7 @@ img {
     justify-content: flex-end;
     align-items: center;
     position: absolute;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -136,6 +136,7 @@ img {
     width: 25px;
     height: 25px;
     animation: bounce 1s infinite;
+
 }
 
 .fade>span>a {
@@ -312,7 +313,8 @@ img {
 ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 5px;
-    height: 5px;
+    height: 10px;
+    
 }
 
 ::-webkit-scrollbar-track {
@@ -324,7 +326,7 @@ img {
 ::-webkit-scrollbar-thumb {
     border-radius: 2px;
     background-color: rgba(0, 0, 0, .5);
-    background: var(--accentColor);
+    background: rgb(86, 207, 157);
     /* -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5); */
 }
 
