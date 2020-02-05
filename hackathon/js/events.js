@@ -116,6 +116,8 @@
             }
         })
     });
+    document.querySelector('#phone a').setAttribute('href', 'tel:' + document.querySelector('#phone a').innerText);
+
     document.querySelectorAll('img').forEach(img => {
         img.onload = () => {
             img.style.opacity = 1;
