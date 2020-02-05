@@ -642,7 +642,7 @@ footer {
     }
 
     .faq {
-        height: 100vh;
+        height: auto;
         background-color: rgb(0, 0, 5);
 
         display: flex;
