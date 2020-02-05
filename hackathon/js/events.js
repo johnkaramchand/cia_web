@@ -119,5 +119,9 @@
         img.onload = () => {
             img.style.opacity = 1;
         }
+        setTimeout(() => {
+            img.style.opacity = 1;
+        }, 1000);
     });
+
 })();
