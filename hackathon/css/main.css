@@ -386,6 +386,7 @@ img {
 .tabs>.selected-tab {
     color: black;
     background: var(--accentColor);
+    transition: all .1s ease-out;
 }
 
 ::-webkit-scrollbar {
