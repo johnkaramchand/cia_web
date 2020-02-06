@@ -48,6 +48,7 @@ p::selection {
 .register-btn {
     position: fixed;
     bottom: 50px;
+
     right: 50px;
     z-index: 100;
     background: var(--accentColor);
@@ -367,17 +368,19 @@ img {
     background: rgb(20, 20, 25);
     border-radius: 15px;
     padding-left: 15px;
-    padding-bottom: 100px;
+    padding-bottom: 15px;
 
 }
 
 .tabs {
-    top: 80vh;
+    /* top: 80vh; */
+    bottom: 40px;
     z-index: 50;
     position: sticky;
     display: flex;
     margin-bottom: 15px;
     margin-left: 10px;
+    padding-right: 10px;
 }
 
 
@@ -697,16 +700,13 @@ footer {
     }
 
     .tabs {
-
-        position: sticky;
-        z-index: 50;
-        top: 80vh;
         justify-content: center;
-        padding-bottom: 20px;
+        bottom: 80px;
+
     }
 
     .day {
-        padding-bottom: 120px;
+        padding-bottom: 15px;
     }
 
     .schedule-card {
@@ -831,7 +831,9 @@ footer {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    .tabs{
+
+    .tabs {
         top: 75vh;
+
     }
 }
