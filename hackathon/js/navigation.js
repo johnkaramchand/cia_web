@@ -63,6 +63,7 @@
         document.querySelector('.tracks'),
         document.querySelector('.faq'),
         document.querySelector('.landing'),
+        document.querySelector('.conduct'),
     ]
     document.querySelector('.fade>span').addEventListener('click', () => {
         if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
@@ -72,7 +73,7 @@
 
     let footerLinks = document.querySelectorAll('.links p');
     footerLinks.forEach((element, i) => {
-        if (i != 6) {
+        if (i != 7) {
             element.addEventListener('click', () => {
                 if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
                     SmoothVerticalScrolling(sections[i], 1000, 'top');
@@ -80,6 +81,19 @@
             })
         }else{
             element.firstChild.style.setProperty('pointer-events','all');
+        }
+
+    })
+    let navLinks = document.querySelectorAll('.nav-links p');
+    navLinks.forEach((element, i) => {
+        if (i != 7) {
+            element.addEventListener('click', () => {
+                if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+                    SmoothVerticalScrolling(sections[i], 1000, 'top');
+                } else sections[i].scrollIntoView();
+            })
+        } else {
+            element.firstChild.style.setProperty('pointer-events', 'all');
         }
 
     })
