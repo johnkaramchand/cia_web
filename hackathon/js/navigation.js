@@ -19,7 +19,7 @@
     }
     observer.observe(landing);
 
-    let sections = [
+    var sections = [
         document.querySelector('.about'),
         document.querySelector('.cia19'),
         document.querySelector('.schedule'),
@@ -43,24 +43,12 @@
         tabs[Number(!tabindex)].setAttribute('class', '');
 
         const sections = document.querySelectorAll('.day-section');
-        animationTimeline.fromTo(sections[Number(!tabindex)], .1, { opacity: '1' }, {
-            opacity: '0', onComplete: () => {
-
-                sections[tabindex].style.display = 'block';
-                sections[Number(!tabindex)].style.display = 'none';
-            }
-
-        })
-        animationTimeline.fromTo(sections[tabindex], .1, { opacity: '0' }, {
-            opacity: '1', onComplete: () => {
-
-                sections[Number(!tabindex)].style.display = 'none';
-
-            }
-        })
-
-
+        animationTimeline.fromTo(sections[Number(!tabindex)], .1, { opacity: '1' }, { opacity: '0', onComplete: () => { sections[tabindex].style.display = 'block'; sections[Number(!tabindex)].style.display = 'none'; } });
+        animationTimeline.fromTo(sections[tabindex], .1, { opacity: '0' }, { opacity: '1', onComplete: () => { sections[Number(!tabindex)].style.display = 'none'; } });
+        
+        if (tabindex) document.querySelector('.schedule').scrollIntoView();
     }
+
     tabs.forEach((tab, i) => {
         tab.addEventListener('click', () => {
             switchTo(i);
