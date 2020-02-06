@@ -79,8 +79,8 @@
                     SmoothVerticalScrolling(sections[i], 1000, 'top');
                 } else sections[i].scrollIntoView();
             })
-        }else{
-            element.firstChild.style.setProperty('pointer-events','all');
+        } else {
+            element.firstChild.style.setProperty('pointer-events', 'all');
         }
 
     })
@@ -90,7 +90,15 @@
             element.addEventListener('click', () => {
                 if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
                     SmoothVerticalScrolling(sections[i], 1000, 'top');
-                } else sections[i].scrollIntoView();
+                } else {
+                    if (i == 0) {
+                        
+                        document.querySelector('footer').scrollIntoView();
+                    } else {
+                        sections[i].scrollIntoView();
+                    }
+
+                }
             })
         } else {
             element.firstChild.style.setProperty('pointer-events', 'all');
