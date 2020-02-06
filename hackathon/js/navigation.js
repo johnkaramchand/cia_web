@@ -8,7 +8,7 @@
     }
     const opt2 = {
         threshold: .2,
-        
+
     }
     let observer = new IntersectionObserver(navCheck, opt);
     let observer2 = new IntersectionObserver(navCheck2, opt2);
@@ -21,8 +21,8 @@
             registerbtn.style.opacity = '1';
             registerbtn.style.setProperty('pointer-events', 'all');
         }
-        
-       
+
+
     }
     function navCheck2(enteries) {
         if (enteries[0].isIntersecting) {
@@ -69,12 +69,19 @@
             SmoothVerticalScrolling(sections[0], 1000, 'top');
         } else sections[0].scrollIntoView();
     });
-    document.querySelectorAll('.links p').forEach((element, i) => {
-        element.addEventListener('click', () => {
-            if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-                SmoothVerticalScrolling(sections[i], 1000, 'top');
-            } else sections[i].scrollIntoView();
-        })
+
+    let footerLinks = document.querySelectorAll('.links p');
+    footerLinks.forEach((element, i) => {
+        if (i != 6) {
+            element.addEventListener('click', () => {
+                if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+                    SmoothVerticalScrolling(sections[i], 1000, 'top');
+                } else sections[i].scrollIntoView();
+            })
+        }else{
+            element.firstChild.style.setProperty('pointer-events','all');
+        }
+
     })
 
     const tabs = document.querySelectorAll('.tabs>h2');
