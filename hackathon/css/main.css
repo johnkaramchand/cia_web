@@ -317,7 +317,6 @@ img {
     height: auto;
     width: 100%;
     padding: 30px;
-
 }
 
 .schedule-title {
@@ -331,6 +330,7 @@ img {
     width: 100%;
     padding: 0px 10px 0px 10px;
 
+    display: flex;
 }
 
 .schedule-section>h3 {
@@ -338,11 +338,27 @@ img {
     font-size: 1.5rem;
 }
 
+.day2-section {
+    display: none;
+}
+
+.day1-section {
+    /* display: none; */
+}
+
+.day-section {
+    width: 100%;
+}
+
 .day {
 
     height: auto;
     overflow: auto;
-    white-space: nowrap;
+    /* white-space: nowrap; */
+
+    display: flex;
+    flex-direction: column;
+
     margin-top: 15px;
     margin-bottom: 15px;
 
@@ -350,6 +366,26 @@ img {
     border-radius: 15px;
     padding-left: 15px;
 
+}
+
+.tabs {
+
+    display: flex;
+    margin-bottom: 10px;
+}
+
+
+.tabs>h2 {
+    color: rgb(117, 116, 126);
+    background: rgb(59, 59, 59);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.tabs>.selected-tab {
+    color: black;
+    background: var(--accentColor);
 }
 
 ::-webkit-scrollbar {
@@ -382,14 +418,14 @@ img {
     color: var(--accentColor);
 }
 
-.day :nth-child(1) {
+/* .day :nth-child(1) {
     padding-left: 0;
-}
+} */
 
-.day :last-child {
+/* .day :last-child {
     padding-right: 20px;
 }
-
+ */
 .schedule-card {
     margin-top: 20px;
     display: inline-block;
