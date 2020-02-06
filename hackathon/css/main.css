@@ -831,4 +831,7 @@ footer {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+    .tabs{
+        top: 75vh;
+    }
 }
