@@ -676,6 +676,41 @@ footer {
 /* MOBILE */
 @media only screen and (max-width: 650px) {
 
+    .schedule {
+        position: relative;
+        padding: 0px;
+    }
+
+    .day-section>h3 {
+        text-align: center;
+    }
+
+    .schedule-title {
+        text-align: center;
+    }
+
+    .tabs {
+
+        position: sticky;
+        z-index: 50;
+        top: 80vh;
+        justify-content: center;
+    }
+
+    .day {
+        padding-bottom: 100px;
+    }
+
+    .schedule-card {
+        margin-top: 20px;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+    .card-content>p{
+        width: 100%;
+    }
+
     .register-btn {
         bottom: 0;
         right: 0;
