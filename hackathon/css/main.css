@@ -13,7 +13,9 @@
     color: var(--textColor);
 
 }
-
+.tabs>h2{
+    cursor: pointer;
+}
 h1,
 h2,
 h3,
