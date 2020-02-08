@@ -13,6 +13,7 @@
     let observer = new IntersectionObserver(navCheck, opt);
     let observer2 = new IntersectionObserver(navCheck2, opt2);
     function navCheck(enteries) {
+
         if (enteries[0].isIntersecting) {
             registerbtn.style.opacity = '0';
             registerbtn.style.setProperty('pointer-events', 'none');
@@ -21,7 +22,6 @@
             registerbtn.style.opacity = '1';
             registerbtn.style.setProperty('pointer-events', 'all');
         }
-
 
     }
     function navCheck2(enteries) {
