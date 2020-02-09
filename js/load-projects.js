@@ -1,107 +1,111 @@
 var api = 'test.ciadev.ninja';
-function createEventCard(event) {
-    let parent = document.querySelector('.event-list');
-    let eventcard = document.createElement('li');
+function createprojectCard(project) {
+    let parent = document.querySelector('.project-list');
+    let projectcard = document.createElement('li');
 
-    eventcard.innerHTML = `<div class="date">
-                        <span>${event.month}</span>
-                        <h1>${event.date}</h1>
+    projectcard.innerHTML = `<div class="date">
+                        <span>${project.month}</span>
+                        <h1>${project.date}</h1>
                     </div>
-                    <div class="event-img">
-                        <img src="${event.img}"
+                    <div class="project-img">
+                        <img src="${project.img}"
                             alt="">
                     </div>
-                    <div class="about-event-right">
+                    <div class="about-project-right">
                         <h1>
-                            ${event.title}
+                            ${project.title}
                         </h1>
-                        <p>${event.discription}</p>
+                        <p>${project.discription}</p>
                     </div>`;
-    parent.appendChild(eventcard);
+    parent.appendChild(projectcard);
 }
-function createRecentEventCard(event) {
-    let eventTag = document.querySelector('.event-tag');
-    let monthNode = document.querySelector('.date span');
-    let dateNode = document.querySelector('.date h1');
-    let eventImg = document.querySelector('.left-event-child-right .event-img img');
-    let eventTitle = document.querySelector('.left-event-child-right .about-event h1');
-    let eventDiscription = document.querySelector('.left-event-child-right .about-event p');
-    let eventRegisteration = document.querySelector('.left-event-child-right .about-event a');
+function createRecentprojectCard(project) {
 
-    saferInnerHTML(eventTag, event.tag);
-    saferInnerHTML(eventTitle, event.title);
-    saferInnerHTML(eventDiscription, event.discription);
-    saferInnerHTML(eventDiscription, `<br>Venue: ${event.venue}`, true);
-    if (event.additionalLinks !== undefined) {
-        let linksNames = Object.keys(event.additionalLinks);
-        let links = Object.values(event.additionalLinks);
+    /* let dateNode = document.querySelector('.date h1'); */
+    let projectImg = document.querySelector('.left-project-child-right .project-img img');
+    let projectTitle = document.querySelector('.left-project-child-right .about-project h1');
+    let projectDiscription = document.querySelector('.left-project-child-right .about-project p');
+    let projectRegisteration = document.querySelector('.left-project-child-right .about-project a');
+
+    saferInnerHTML(projectTitle, project.title);
+    saferInnerHTML(projectDiscription, project.discription);
+    
+    if (project.additionalLinks !== undefined) {
+        let linksNames = Object.keys(project.additionalLinks);
+        let links = Object.values(project.additionalLinks);
         linksNames.forEach((name, i) => {
-            saferInnerHTML(eventDiscription, `<br>${name}: ${links[i]}`, true);
+            saferInnerHTML(projectDiscription, `<br>${name}: ${links[i]}`, true);
         });
     }
-    saferInnerHTML(dateNode, event.date);
-    saferInnerHTML(monthNode, event.month);
-    eventRegisteration.setAttribute('href', event.register);
-    eventImg.setAttribute('src', event.img);
+    /* saferInnerHTML(dateNode, project.date);
+    saferInnerHTML(monthNode, project.month); */
+    projectRegisteration.setAttribute('href', project.register);
+    projectImg.setAttribute('src', project.img);
 }
-function parseEventData(json) {
-    var events = [];
-    json.forEach((e) => {
-        let date = new Date(e.e_date);
-        const months = ['Jan', 'Feb', 'Mar', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+function parseprojectData(json) {
+    var projects = [];
+    json.forEach((p) => {
+        /* let date = new Date(p.p_date);
+        const months = ['Jan', 'Feb', 'Mar', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']; */
         /* let keys = Object.keys(json);
         let values = Object.values(json);
         let extralinks;
         keys.forEach((key)=>{
     
         }); */
-        let event = {
-            title: e.e_title,
-            discription: e.e_description,
-            date: date.getDate(),
-            month: months[date.getMonth()],
-            register: e.e_registration_link,
-            venue: e.e_venue,
-            img: e.e_photos_link,
+        let project = {
+            title: p.p_title,
+            discription: p.p_desc,
+            register: p.p_apply_link,
+            img: p.p_image,
             additionalLinks: {
-                'starts at': e.e_start_time.split(':')[0] + ':' + e.e_start_time.split(':')[1],
-                'ends at': e.e_end_time.split(':')[0] + ':' + e.e_end_time.split(':')[1],
-                'medium': e.e_medium_link,
+                'medium': p.p_medium_link,
             }
         };
-        events.push(event)
+        projects.push(project)
 
     });
 
-    return events;
+    return projects;
 }
-function updateUI(events) {
-    console.log(events);
-    if (events.length === 1) {
-        events[0].tag = 'Latest';
-        createRecentEventCard(events[0]);
-        //document.querySelector('.right-event').style.display = 'none';
+function updateUI(projects) {
+    console.log(projects);
+    if (projects.length === 1) {
+
+        createRecentprojectCard(projects[0]);
+        document.querySelector('.right-project').style.display = 'none';
+        let left = document.querySelector('.left-project');
+        let projectsBlock = document.querySelector('.projects');
+        projectsBlock.style.setProperty('grid-template-columns', '1fr');
+        let RightprojectsBlock = document.querySelector('.left-project-child-right');
+        RightprojectsBlock.style.setProperty('display', 'flex');
+        RightprojectsBlock.style.setProperty('height', '80vh');
+        let aboutproject = document.querySelector('.about-project');
+        aboutproject.style.setProperty('margin-left', '15px');
+        aboutproject.style.setProperty('margin-top', '15px');
+        left.style.width = '100%';
+        document.querySelector('.project-img').style.height = '70vh';
     } else {
-        events.forEach((event, i) => {
+        projects.forEach((project, i) => {
             if (i === 0) {
-                event.tag = 'Latest';
-                createRecentEventCard(event);
+                project.tag = 'Latest';
+                createRecentprojectCard(project);
             } else {
-                createEventCard(event);
+                createprojectCard(project);
             }
         });
     }
 
 }
 function get() {
-    let url = 'http://' + api + '/api/v2/events/?format=json';
+    let url = 'http://' + api + '/api/v2/getProjects/?format=json';
     var xmlhttp = new XMLHttpRequest();
 
 
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var myArr = JSON.parse(xmlhttp.responseText);
-            updateUI(parseEventData(myArr));
+            updateUI(parseprojectData(myArr));
 
         }
     };
@@ -113,7 +117,7 @@ function get() {
 
 get();
 
-/* createRecntEventCard({
+/* createRecntprojectCard({
     month: 'Feb',
     date: '03',
     title: 'test',
@@ -126,7 +130,7 @@ get();
     },
     discription: 'test testestte stestt este sttestest testestte stesttes ttesttestt esttestte sttest test'
 });
-createEventCard({
+createprojectCard({
     month: 'Jan',
     date: '03',
     title: 'test',

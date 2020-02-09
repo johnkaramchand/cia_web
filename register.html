@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/loginAndRegister/login.css">
-    <title>Log in</title>
+    <title>join us</title>
 </head>
 
 <body>
@@ -18,7 +18,11 @@
         <h1 class="cia-tag">
             CIA
         </h1>
-        <form class="login" action="">
+        <form class="register" action="">
+            <div class="text-ip">
+                <input required type="text" id="email" name="email">
+                <label for="email"><span>Email</span></label>
+            </div>
             <div class="text-ip">
                 <input required type="text" id="username" name="username">
                 <label for="username"><span>Username</span></label>
@@ -27,10 +31,22 @@
                 <input required type="password" id="password" name="password">
                 <label for="password"><span>Password</span></label>
             </div>
+            <div class="text-ip">
+                <input required type="password" id="password" name="password">
+                <label for="password"><span>Re-type password</span></label>
+            </div>
+            <div class="text-ip">
+                <input required type="text" id="usn" name="usn">
+                <label for="usn"><span>USN</span></label>
+            </div>
+            <div class="text-ip">
+                <input required type="tel" id="number" name="number">
+                <label for="number"><span>Phone number</span></label>
+            </div>
 
             <div class="submit-section">
-                <a href="#">forgot password?</a>
-                <button type="submit">Log In</button>
+                <button type="submit">Sign up</button>  
+                <a href="login.html">Log in?</a>
             </div>
         </form>
     </main>

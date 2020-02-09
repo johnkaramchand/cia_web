@@ -10,17 +10,43 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <title>CIA MLH</title>
+    <script src="./js/gsap/css.js" defer></script>
+    <script src="./js/gsap/tlm.js" defer></script>
+    <script src="./js/gsap/tm.js" defer></script>
+    <script src="./js/intro.js" defer></script>
+    <script src="./js/navigation.js" defer></script>
     <script src="./js/events.js" defer></script>
+    <script src="./js/gallery.js" defer></script>
+
 </head>
+<a id="mlh-trust-badge"
+    style="display:block;max-width:60px;min-width:40px;position:fixed;right:20px;top:0;width:10%;z-index:10000"
+    href="https://mlh.io/seasons/apac-2020/events?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=black"
+    target="_blank"><img
+        src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-apac-black.svg"
+        alt="Major League Hacking 2020 Hackathon Season" style="width:100%"></a>
 
 <body>
-    <div class="landing">
+    <div class="intro-cover">
+        <div class="intro-logo-img">
+            <img data-src="./img/logo.png" alt="">
+        </div>
+        <h1 class="intro-cover-text">Communities in Atria</h1>
+    </div>
+    <a href="https://my.mlh.io/oauth/authorize?client_id=cdaf4cff90d57392013448818e1de9a71d71cc5fd210ad04bd0d34bff8e6fe5c&redirect_uri=http://hack.cia.atria.edu/registered.html&response_type=token"
+        target="_blank">
+        <div class="register-btn">
+            <h3>REGISTER NOW</h3>
+        </div>
+    </a>
+
+    <div class="landing" id="home">
         <div class="landing-shade"></div>
         <div class="img1">
-            <img src="./img/notstlinesAsset 3@4x Copy.png" alt="">
+            <img data-src="./img/notstlinesAsset 3@4x Copy.png" alt="">
         </div>
         <div class="img2">
-            <img src="./img/notstlinesAsset 3@4x.png" alt="">
+            <img data-src="./img/notstlinesAsset 3@4x.png" alt="">
         </div>
         <div class="landing-text">
             <h1 id="cia-title">CIA</h1>
@@ -28,13 +54,25 @@
             <h3>Solve Build Grow</h3>
         </div>
         <div class="fade">
-            <span>MORE</span>
+            <div class="nav-links">
+                <p><a href="">Contact</a></p>
+                <p><a href="">CIA hack 2019</a></p>
+                <p><a href="">Schedule</a></p>
+                <p><a href="">Tracks and Theme</a></p>
+                <p><a href="">FAQ</a></p>
+                <p><a href="">Home</a></p>
+                <p><a href="">Conduct</a></p>
+                <p><a href="https://my.mlh.io/oauth/authorize?client_id=cdaf4cff90d57392013448818e1de9a71d71cc5fd210ad04bd0d34bff8e6fe5c&redirect_uri=http://hack.cia.atria.edu/registered.html&response_type=token"
+                        target="_blank">Register</a></p>
+            </div>
+            <span><a href="">MORE</a></span>
             <div class="down-arrow">
                 <img src="https://img.icons8.com/material/24/000000/expand-arrow--v1.png">
             </div>
+
         </div>
     </div>
-    <div class="about">
+    <div class="about" id="about">
         <h1>ABOUT</h1>
         <p>CIA Hackathon aims at bringing together engineers, designers, and students to hack and build life-changing
             solutions
@@ -46,47 +84,66 @@
         </p>
     </div>
 
-    <div class="cia19">
+    <div class="cia19" id="cia-hack">
         <h1>CIA HACK 2019</h1>
+        <div class="left-btn">
+            <div class="left-arrow arrow">
+                <img src="https://img.icons8.com/material-rounded/96/000000/circled-chevron-right.png">
+            </div>
+        </div>
+        <div class="right-btn">
+            <div class="right-arrow arrow">
+                <img src="https://img.icons8.com/material-rounded/96/000000/circled-chevron-right.png">
+            </div>
+        </div>
         <div class="photos-old">
             <div class="i4 img">
-                <img src="./img/photos/IMG_20190414_204411.jpg" alt="" srcset="">
+                <img data-src="./img/photos/IMG_20190414_204411.jpg" alt="" srcset="">
             </div>
             <div class="i2 img">
-                <img src="./img/photos/IMG_20190413_234903.jpg" alt="" srcset="">
+                <img data-src="./img/photos/IMG_20190413_234903.jpg" alt="" srcset="">
             </div>
             <div class="i3 img">
-                <img src="./img/photos/IMG_20190414_131709.jpg" alt="" srcset="">
+                <img data-src="./img/photos/IMG_20190414_131709.jpg" alt="" srcset="">
             </div>
             <div class="i1 img">
-                <img src="./img/photos/IMG_20190413_224344.jpg" alt="" srcset="">
+                <img data-src="./img/photos/IMG_20190413_224344.jpg" alt="" srcset="">
             </div>
-            
-           
-            
-            
+
         </div>
     </div>
 
-    <div class="schedule">
+
+
+    <div class="schedule" id="schedule">
         <div class="schedule-title">
             <h1>The Schedule</h1>
         </div>
-        <div class="schedule-section">
-            <div class="scroll-shade"></div>
-            <h3><span>Saturday</span><span> March 14th</span></h3>
-            <div class="day1 day"></div>
 
-            <h3><span>Sunday</span><span> March 15th</span></h3>
-            <div class="day2 day"></div>
+        <div class="schedule-section">
+            <div class="day1-section day-section">
+                <h3 class="day1-date"><span>Saturday</span><span> March 14th</span></h3>
+                <div class="day1 day"></div>
+            </div>
+
+            <div class="day2-section day-section">
+                <h3 class="day2-date"><span>Sunday</span><span> March 15th</span></h3>
+                <div class="day2 day"></div>
+            </div>
+
+        </div>
+        <div class="tabs">
+            <h2 id="day1-tab">Day one</h2>
+            <h2 id="day2-tab">Day two</h2>
         </div>
     </div>
 
-    <div class="tracks">
+
+
+    <div class="tracks" id="tracks">
         <div class="track-title">
             <h1>Tracks/Themes</h1>
         </div>
-        <div class="track-scroll-shade"></div>
         <div class="track-section">
 
 
@@ -171,9 +228,9 @@
 
 
 
-    <div class="faq">
+    <div class="faq" id="faq">
         <div class="questions">
-            <h1>FREQUENTLY ASKED QUESTIONS</h1>
+            <h1 class="faq-title">FREQUENTLY ASKED QUESTIONS</h1>
             <div class="question">
                 <h3>I do not know anything technical. Can i take part?</h3>
                 <div class="answer">
@@ -239,20 +296,62 @@
     <div class="sponsor-section">
         <h1>Event Partner</h1>
         <div class="mlh-logo">
-            <img src="https://static.mlh.io/brand-assets/logo/official/mlh-logo-white.svg">
+            <img data-src="https://static.mlh.io/brand-assets/logo/official/mlh-logo-white.svg">
         </div>
+    </div>
+
+    <div class="conduct">
+        
+        <div class="conduct-title">
+            <h1>Code of Conduct</h1>
+        </div>
+        <div class="conduct-text">
+            <p>TL;DR. Be respectful. Harassment and abuse are never tolerated. If you are in a situation that makes you
+                uncomfortable
+                at an MLH Member Event, if the event itself is creating an unsafe or inappropriate environment, or if
+                interacting with a
+                MLH representative or event organizer makes you uncomfortable, please report it using the procedures
+                included in this
+                document. Major League Hacking (MLH) stands for inclusivity. We believe that every single person has the
+                right to hack
+                in a safe and welcoming environment. <br>
+                <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">Read more..</a>
+            </p>    
+        </div>
+        
     </div>
     <footer>
         <div class="contact-section">
             <h3>Contact</h3>
-            <p>Mail us at <a href="#">communities.atria@gmail.com</a></p>
-            <p>call us at +91 123 456 1232</p>
+            <p>Mail us at <a href="mailto:communities.atria@gmail.com">communities.atria@gmail.com</a></p>
+            <p id="phone">call us at <a href="">+91 123 456 1232</a></p>
+            <p>DM us at <a href="https://www.instagram.com/cia_together/" target="_blank">@cia_together</a></p>
             <p class="adress">
                 <a style=" margin-top:10px; display:block;"
                     href="https://www.google.com/maps/place/Atria+Institute+of+Technology/@13.0325489,77.5899031,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae17bd97727093:0x5135aab8250c1df5!8m2!3d13.0325489!4d77.5920918?hl=en-US"
                     target="_blank">Adress at</a>
                 ASKB Campus,<br> 1st Main Rd, Ags Colony,<br> Anandnagar, Hebbal,<br> Bengaluru, Karnataka 560024
             </p>
+        </div>
+        <nav class="links">
+            <h3>Go to</h3>
+            <p><a href="">About</a></p>
+            <p><a href="">CIA hack 2019</a></p>
+            <p><a href="">Schedule</a></p>
+            <p><a href="">Tracks and Theme</a></p>
+            <p><a href="">FAQ</a></p>
+            <p><a href="">Home</a></p>
+            <p><a href="">Conduct</a></p>
+            <p><a href="https://my.mlh.io/oauth/authorize?client_id=cdaf4cff90d57392013448818e1de9a71d71cc5fd210ad04bd0d34bff8e6fe5c&redirect_uri=http://hack.cia.atria.edu/registered.html&response_type=token"
+                    target="_blank">Register</a>
+            </p>
+        </nav>
+
+        <div class="logo">
+
+            <div class="logo-img">
+                <img data-src="./img/logo.png" alt="">
+            </div>
         </div>
     </footer>
 
